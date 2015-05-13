@@ -25,6 +25,7 @@
 		72C815A51AC99170001B602F /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72C815991AC9909D001B602F /* Mapbox.bundle */; };
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
 		72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4C1AD1417E00D8E7AF /* red_icon.png */; };
+		7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		72C815A81AC994DF001B602F /* glentressmap-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "glentressmap-prefix.pch"; sourceTree = "<group>"; };
 		72E88B4B1AD1417E00D8E7AF /* orange_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_icon.png; sourceTree = "<group>"; };
 		72E88B4C1AD1417E00D8E7AF /* red_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_icon.png; sourceTree = "<group>"; };
+		7DD5A15D1B03AD2400B95138 /* ic_action_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_search.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				72C815A81AC994DF001B602F /* glentressmap-prefix.pch */,
 				72C815A61AC99370001B602F /* UIKit.framework */,
 				72C815A31AC9914B001B602F /* libz.dylib */,
+				7DD5A15D1B03AD2400B95138 /* ic_action_search.png */,
 				72C815A11AC9913F001B602F /* libsqlite3.dylib */,
 				72C8159E1AC99126001B602F /* QuartzCore.framework */,
 				72C8159C1AC9911A001B602F /* CoreLocation.framework */,
@@ -312,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */,
 				72C815A51AC99170001B602F /* Mapbox.bundle in Resources */,
 				72C80F7D1AC98DD7001B602F /* Main.storyboard in Resources */,
 				72C80F821AC98DD7001B602F /* LaunchScreen.xib in Resources */,

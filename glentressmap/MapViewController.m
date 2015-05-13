@@ -23,7 +23,7 @@
     RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:offlineSource];
     
     if (!self.mapView) {
-    self.mapView = mapView;
+        self.mapView = mapView;
     }
     
     mapView.zoom = 15;
@@ -31,7 +31,7 @@
     mapView.minZoom = 1;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(55.5720,-3.0615);
     mapView.centerCoordinate = center;
-
+    
     CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(55.6262,-2.9881);
     CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(55.5694, -3.0815);
     
@@ -40,18 +40,31 @@
     mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
     mapView.adjustTilesForRetinaDisplay = NO; //use hd map
+    mapView.hideAttribution = YES;
     [self.view addSubview:mapView];
     
     RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
                                                           coordinate:center
                                                             andTitle:@"Home"];
-
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIImage * buttonImage = [UIImage imageNamed:@"ic_action_search.png"];
+    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [button addTarget:self
+               action:@selector(aMethod:)
+     forControlEvents:UIControlEventTouchUpInside];
+     //button.backgroundColor = [UIColor whiteColor];
+    [button setTitle:@"Show View" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [self.view addSubview:button];
     
     
     
+    mapView.showLogoBug = NO;
     annotation.coordinate = center;
     annotation.title      = @"anything";
     mapView.delegate = self;
+    
     
     [mapView addAnnotation:annotation];
 }
@@ -65,12 +78,18 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
-
-    self.navigationItem.rightBarButtonItem = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-
+    
+    
+    UIBarButtonItem *locate = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+    
+      UIBarButtonItem *searchCancelButton = [[UIBarButtonItem alloc] initWithTitle:@"custom1" style:UIBarButtonItemStyleBordered target:self action:nil];
+  [searchCancelButton setBackgroundVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
+  UIBarButtonItem *searchCancelButton1 = [[UIBarButtonItem alloc] initWithTitle:@"custom2" style:UIBarButtonItemStyleBordered target:self action:nil];
+  [searchCancelButton1 setBackgroundVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
+  [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:searchCancelButton, locate, nil] animated:NO];
+    
     //self.navigationItem.rightBarButtonItem.tintColor = kTintColor;
-
+    
     self.mapView.userTrackingMode = RMUserTrackingModeFollow;
 }
 
@@ -106,13 +125,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
