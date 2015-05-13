@@ -22,6 +22,10 @@
     
     RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:offlineSource];
     
+    if (!self.mapView) {
+    self.mapView = mapView;
+    }
+    
     mapView.zoom = 15;
     mapView.maxZoom = 18;
     mapView.minZoom = 1;
@@ -35,7 +39,7 @@
     
     mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
-    mapView.adjustTilesForRetinaDisplay = YES; //use hd map
+    mapView.adjustTilesForRetinaDisplay = NO; //use hd map
     [self.view addSubview:mapView];
     
     RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
@@ -56,6 +60,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+
+    self.navigationItem.rightBarButtonItem = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+
+    //self.navigationItem.rightBarButtonItem.tintColor = kTintColor;
+
+    self.mapView.userTrackingMode = RMUserTrackingModeFollow;
+}
+
 
 
 - (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation

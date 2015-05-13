@@ -11,4 +11,7 @@
 @interface MapViewController : UIViewController<RMMapViewDelegate>
 @property (nonatomic, strong) NSArray *lineStrings;
 
+@property (nonatomic, strong) IBOutlet RMMapView *mapView;
+
+
 @end
