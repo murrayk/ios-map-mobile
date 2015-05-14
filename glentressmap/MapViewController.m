@@ -10,7 +10,7 @@
 #import "MapViewController.h"
 
 @interface MapViewController ()
-
+- (void)showTrailLocations;
 @end
 
 @implementation MapViewController
@@ -47,16 +47,6 @@
                                                           coordinate:center
                                                             andTitle:@"Home"];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    UIImage * buttonImage = [UIImage imageNamed:@"ic_action_search.png"];
-    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [button addTarget:self
-               action:@selector(aMethod:)
-     forControlEvents:UIControlEventTouchUpInside];
-     //button.backgroundColor = [UIColor whiteColor];
-    [button setTitle:@"Show View" forState:UIControlStateNormal];
-    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-    [self.view addSubview:button];
     
     
     
@@ -80,18 +70,20 @@
     [super viewDidAppear:animated];
     
     
-    UIBarButtonItem *locate = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-    
-      UIBarButtonItem *searchCancelButton = [[UIBarButtonItem alloc] initWithTitle:@"custom1" style:UIBarButtonItemStyleBordered target:self action:nil];
-  [searchCancelButton setBackgroundVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
-  UIBarButtonItem *searchCancelButton1 = [[UIBarButtonItem alloc] initWithTitle:@"custom2" style:UIBarButtonItemStyleBordered target:self action:nil];
-  [searchCancelButton1 setBackgroundVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
-  [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:searchCancelButton, locate, nil] animated:NO];
-    
-    //self.navigationItem.rightBarButtonItem.tintColor = kTintColor;
+    UIBarButtonItem *locateButton = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showTrailLocations)];
+
+    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:searchButton, locateButton, nil] animated:NO];
     
     self.mapView.userTrackingMode = RMUserTrackingModeFollow;
 }
+
+- (void)showTrailLocations
+{
+    //execute segue programmatically
+    [self performSegueWithIdentifier: @"locations" sender: self];
+}
+
 
 
 

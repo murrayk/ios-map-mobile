@@ -26,6 +26,8 @@
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
 		72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4C1AD1417E00D8E7AF /* red_icon.png */; };
 		7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
+		7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */; };
+		7DD5A1651B04BBF800B95138 /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* strings.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,9 @@
 		72E88B4B1AD1417E00D8E7AF /* orange_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_icon.png; sourceTree = "<group>"; };
 		72E88B4C1AD1417E00D8E7AF /* red_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_icon.png; sourceTree = "<group>"; };
 		7DD5A15D1B03AD2400B95138 /* ic_action_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_search.png; sourceTree = "<group>"; };
+		7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailLocationsViewController.h; sourceTree = "<group>"; };
+		7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailLocationsViewController.m; sourceTree = "<group>"; };
+		7DD5A1641B04BBF700B95138 /* strings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				7265A8561AFF995200CBAF79 /* testjson.json */,
+				7DD5A1641B04BBF700B95138 /* strings.xml */,
 				724DF6721AD325CA0061B73B /* MapViewController.h */,
 				724DF6731AD325CA0061B73B /* MapViewController.m */,
 				72C815A81AC994DF001B602F /* glentressmap-prefix.pch */,
@@ -159,6 +165,8 @@
 				72C80F781AC98DD7001B602F /* ViewController.h */,
 				72C80F791AC98DD7001B602F /* ViewController.m */,
 				72C80F7B1AC98DD7001B602F /* Main.storyboard */,
+				7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */,
+				7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */,
 				72C80F7E1AC98DD7001B602F /* Images.xcassets */,
 				72C80F801AC98DD7001B602F /* LaunchScreen.xib */,
 				72C80F711AC98DD7001B602F /* Supporting Files */,
@@ -315,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD5A1651B04BBF800B95138 /* strings.xml in Resources */,
 				7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */,
 				72C815A51AC99170001B602F /* Mapbox.bundle in Resources */,
 				72C80F7D1AC98DD7001B602F /* Main.storyboard in Resources */,
@@ -343,6 +352,7 @@
 			files = (
 				72C80F7A1AC98DD7001B602F /* ViewController.m in Sources */,
 				72C80F771AC98DD7001B602F /* AppDelegate.m in Sources */,
+				7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */,
 				72C80F741AC98DD7001B602F /* main.m in Sources */,
 				724DF6741AD325CA0061B73B /* MapViewController.m in Sources */,
 			);
