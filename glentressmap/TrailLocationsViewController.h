@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrailLocationsViewController : UITableViewController
 
+@protocol SecondViewControllerDelegate;
+
+@interface TrailLocationsViewController : UITableViewController
+@property (nonatomic,weak) id<SecondViewControllerDelegate> delegate;
+@end
+
+@protocol SecondViewControllerDelegate
+- (void)secondViewControllerDidFinish:(TrailLocationsViewController*)secondViewController;
 @end

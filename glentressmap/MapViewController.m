@@ -8,6 +8,7 @@
 #import "Mapbox.h"
 
 #import "MapViewController.h"
+#import "TrailLocationsViewController.h"
 
 @interface MapViewController ()
 - (void)showTrailLocations;
@@ -116,14 +117,18 @@
     
 }
 
-/*
- #pragma mark - Navigation
+- (void)secondViewControllerDidFinish:(TrailLocationsViewController*)secondViewController{
+
  
+}
+
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+    TrailLocationsViewController *tlvc = segue.destinationViewController;
+    
  }
- */
+
 
 @end

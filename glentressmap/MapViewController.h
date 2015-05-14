@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MapViewController : UIViewController<RMMapViewDelegate>
+#import "TrailLocationsViewController.h"
+@interface MapViewController : UIViewController<RMMapViewDelegate,SecondViewControllerDelegate>
 @property (nonatomic, strong) NSArray *lineStrings;
 
 @property (nonatomic, strong) IBOutlet RMMapView *mapView;

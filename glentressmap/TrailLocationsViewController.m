@@ -8,6 +8,7 @@
 
 #import "TrailLocationsViewController.h"
 
+
 @interface TrailLocationsViewController ()<NSXMLParserDelegate>{
     BOOL inStringArrayTag;
     BOOL inItemTag;
@@ -16,7 +17,10 @@
 @property(nonatomic, strong) NSString * stringArrayNameAttr;
 @property(nonatomic, strong) NSMutableArray * trailNames;
 @property(nonatomic, strong) NSMutableArray * trailLocations;
+
 @end
+
+
 
 @implementation TrailLocationsViewController
 
@@ -181,6 +185,12 @@
         }
         
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    [self.delegate secondViewControllerDidFinish:self];
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
