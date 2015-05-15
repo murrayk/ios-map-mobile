@@ -75,8 +75,9 @@
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showTrailLocations)];
 
     [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:searchButton, locateButton, nil] animated:NO];
+    //move to location.
     
-    self.mapView.userTrackingMode = RMUserTrackingModeFollow;
+    //self.mapView.userTrackingMode = RMUserTrackingModeFollow;
 }
 
 - (void)showTrailLocations
@@ -117,9 +118,18 @@
     
 }
 
-- (void)secondViewControllerDidFinish:(TrailLocationsViewController*)secondViewController{
+- (void)TrailLocationsViewControllerDidFinish:(TrailLocationsViewController *)secondViewController moveToCoord:(CLLocationCoordinate2D)location{
+    self.mapView.zoom = 17;
+    
+    self.mapView.centerCoordinate = location;
+    
+    RMPointAnnotation *annotation = [[RMPointAnnotation alloc]
+                                     initWithMapView:self.mapView
+                                     coordinate:location
+                                     andTitle:@"Hello, world!"];
 
- 
+    [self.mapView addAnnotation:annotation];
+    //
 }
 
  // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -127,6 +137,7 @@
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
     TrailLocationsViewController *tlvc = segue.destinationViewController;
+    tlvc.delegate = self;
     
  }
 

@@ -7,7 +7,7 @@
 //
 
 #import "TrailLocationsViewController.h"
-
+#import "Mapbox.h"
 
 @interface TrailLocationsViewController ()<NSXMLParserDelegate>{
     BOOL inStringArrayTag;
@@ -190,7 +190,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.navigationController popViewControllerAnimated:YES];
-    [self.delegate secondViewControllerDidFinish:self];
+    NSString *coord = self.trailLocations[indexPath.row];
+    NSArray *coords = [coord componentsSeparatedByString:@","];
+
+    double lon = [coords[0] doubleValue];
+    double lat =  [coords[1] doubleValue];
+    
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(lat,lon);
+    [self.delegate TrailLocationsViewControllerDidFinish:self moveToCoord:location];
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {

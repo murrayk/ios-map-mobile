@@ -28,6 +28,7 @@
 		7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
 		7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */; };
 		7DD5A1651B04BBF800B95138 /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* strings.xml */; };
+		E424B63AA12B5637C73E94BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 147EB3B4909AF5E97DCE264F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		147EB3B4909AF5E97DCE264F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A3736793BF6E002FE36424 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724DF6721AD325CA0061B73B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = glentressmap/MapViewController.h; sourceTree = "<group>"; };
 		724DF6731AD325CA0061B73B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = glentressmap/MapViewController.m; sourceTree = "<group>"; };
 		7265A8561AFF995200CBAF79 /* testjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testjson.json; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailLocationsViewController.h; sourceTree = "<group>"; };
 		7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailLocationsViewController.m; sourceTree = "<group>"; };
 		7DD5A1641B04BBF700B95138 /* strings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
+		9588821B1B9222E123496B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				72C815A01AC99133001B602F /* libMapbox.a in Frameworks */,
 				72C8159F1AC99126001B602F /* QuartzCore.framework in Frameworks */,
 				72C8159D1AC9911A001B602F /* CoreLocation.framework in Frameworks */,
+				E424B63AA12B5637C73E94BF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61929C1777C52396B95AE78D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				147EB3B4909AF5E97DCE264F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		72A655A51AC9AD0A005B4C07 /* maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,8 @@
 				72C80F701AC98DD7001B602F /* glentressmap */,
 				72C80F8A1AC98DD7001B602F /* glentressmapTests */,
 				72C80F6F1AC98DD7001B602F /* Products */,
+				FB2D69532FABAEEB760BE0BD /* Pods */,
+				61929C1777C52396B95AE78D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +233,15 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		FB2D69532FABAEEB760BE0BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9588821B1B9222E123496B1A /* Pods.debug.xcconfig */,
+				61A3736793BF6E002FE36424 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72C80F911AC98DD7001B602F /* Build configuration list for PBXNativeTarget "glentressmap" */;
 			buildPhases = (
+				51ED8DA1B9E44EE00A8D13FA /* Check Pods Manifest.lock */,
 				72C80F6A1AC98DD7001B602F /* Sources */,
 				72C80F6B1AC98DD7001B602F /* Frameworks */,
 				72C80F6C1AC98DD7001B602F /* Resources */,
+				DF65149700736D44F54D4A2E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,6 +370,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51ED8DA1B9E44EE00A8D13FA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF65149700736D44F54D4A2E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72C80F6A1AC98DD7001B602F /* Sources */ = {
@@ -481,6 +540,7 @@
 		};
 		72C80F921AC98DD7001B602F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9588821B1B9222E123496B1A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -501,7 +561,10 @@
 					"/Users/murray/glentress/mapbox-ios-sdk/MapView/Map/GRMustache/lib",
 					"/Users/murray/glentress/mapbox-ios-sdk/Proj4",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -510,6 +573,7 @@
 		};
 		72C80F931AC98DD7001B602F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A3736793BF6E002FE36424 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -530,7 +594,10 @@
 					"/Users/murray/glentress/mapbox-ios-sdk/MapView/Map/GRMustache/lib",
 					"/Users/murray/glentress/mapbox-ios-sdk/Proj4",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

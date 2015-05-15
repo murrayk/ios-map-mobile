@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Mapbox.h>
 
-
-@protocol SecondViewControllerDelegate;
+@protocol TrailSelectionDelegate;
 
 @interface TrailLocationsViewController : UITableViewController
-@property (nonatomic,weak) id<SecondViewControllerDelegate> delegate;
+@property (nonatomic,weak) id<TrailSelectionDelegate> delegate;
 @end
 
-@protocol SecondViewControllerDelegate
-- (void)secondViewControllerDidFinish:(TrailLocationsViewController*)secondViewController;
+@protocol TrailSelectionDelegate
+- (void)TrailLocationsViewControllerDidFinish:(TrailLocationsViewController*)secondViewController moveToCoord:(CLLocationCoordinate2D) location;
 @end
