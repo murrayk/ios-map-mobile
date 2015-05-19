@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vjc-nB-rmu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vjc-nB-rmu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -85,11 +85,12 @@
                     <navigationItem key="navigationItem" id="x5w-eJ-c1R"/>
                     <connections>
                         <segue destination="Aq7-xs-MXl" kind="show" identifier="locations" id="Nu0-R8-4ca"/>
+                        <segue destination="AKe-91-Y6G" kind="show" identifier="terrain" id="opo-Sc-Jfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijR-vW-iHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="434"/>
+            <point key="canvasLocation" x="2066" y="950"/>
         </scene>
         <!--Trail Locations View Controller-->
         <scene sceneID="8QZ-eY-dK5">
@@ -127,6 +128,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xK-70-lWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2684" y="428"/>
+        </scene>
+        <!--Terrain View Controller-->
+        <scene sceneID="fQn-KL-X9f">
+            <objects>
+                <viewController id="AKe-91-Y6G" customClass="TerrainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dIl-XE-RIw"/>
+                        <viewControllerLayoutGuide type="bottom" id="GoQ-fD-5g4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rOi-4e-4II">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nF8-i3-CDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="1136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JmA-vR-RGy">

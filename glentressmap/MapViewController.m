@@ -12,6 +12,8 @@
 
 @interface MapViewController ()
 - (void)showTrailLocations;
+
+- (void)showTerrain;
 @end
 
 @implementation MapViewController
@@ -73,12 +75,15 @@
     
     UIBarButtonItem *locateButton = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showTrailLocations)];
+    UIBarButtonItem *terrainButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(showTerrain)];
 
-    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:searchButton, locateButton, nil] animated:NO];
+    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:terrainButton,searchButton, locateButton, nil] animated:NO];
     //move to location.
     
     //self.mapView.userTrackingMode = RMUserTrackingModeFollow;
 }
+
+
 
 - (void)showTrailLocations
 {
@@ -86,7 +91,11 @@
     [self performSegueWithIdentifier: @"locations" sender: self];
 }
 
-
+- (void)showTerrain
+{
+    //execute segue programmatically
+    [self performSegueWithIdentifier: @"terrain" sender: self];
+}
 
 
 - (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
@@ -136,8 +145,11 @@
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
-    TrailLocationsViewController *tlvc = segue.destinationViewController;
-    tlvc.delegate = self;
+     if ([segue.identifier isEqual:@"locations"]) {
+         TrailLocationsViewController *tlvc = segue.destinationViewController;
+         tlvc.delegate = self;
+     }
+
     
  }
 
