@@ -7,18 +7,24 @@
 //
 
 #import "TerrainViewController.h"
+#import "BEMSimpleLineGraphView.h"
 
 
-
-@interface TerrainViewController ()<NSXMLParserDelegate>{
+@interface TerrainViewController ()<NSXMLParserDelegate,BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate>{
     BOOL inStringArrayTag;
     BOOL inItemTag;
     
 }
+@property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *myGraph;
 @property(nonatomic, strong) NSString * stringArrayNameAttr;
 @property(nonatomic, strong) NSMutableArray * redTrailElevations;
 @property(nonatomic, strong) NSMutableArray * downHillTrailElevations;
+@property(nonatomic, strong) NSMutableArray * xLabs;
+@property(nonatomic, strong) NSMutableSet *usedXLabels;
+
+
 -(void) parseXml;
+
 @end
 
 
@@ -29,13 +35,55 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self parseXml];
+    
+    
+
+    self.usedXLabels = [[NSMutableSet alloc]init];
+    
+    self.xLabs = [[NSMutableArray alloc] init];
+    /* This is commented out because the graph is created in the interface with this sample app. However, the code remains as an example for creating the graph using code.
+     BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];
+     myGraph.delegate = self;
+     myGraph.dataSource = self;
+     [self.view addSubview:myGraph]; */
+    
+    // Customization of the graph
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    size_t num_locations = 2;
+    CGFloat locations[2] = { 0.0, 1.0 };
+    CGFloat components[8] = {
+        1.0, 1.0, 1.0, 1.0,
+        1.0, 1.0, 1.0, 0.0
+    };
+    self.myGraph.gradientBottom = CGGradientCreateWithColorComponents(colorspace, components, locations, num_locations);
+    self.myGraph.colorTop = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+    self.myGraph.colorBottom = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+    self.myGraph.colorLine = [UIColor whiteColor];
+    self.myGraph.colorXaxisLabel = [UIColor whiteColor];
+    self.myGraph.colorYaxisLabel = [UIColor whiteColor];
+    self.myGraph.widthLine = 3.0;
+    self.myGraph.enableTouchReport = YES;
+    self.myGraph.enablePopUpReport = YES;
+    self.myGraph.enableBezierCurve = YES;
+    self.myGraph.enableYAxisLabel = YES;
+    self.myGraph.autoScaleYAxis = YES;
+    self.myGraph.alwaysDisplayDots = NO;
+    self.myGraph.enableReferenceXAxisLines = YES;
+    self.myGraph.enableReferenceYAxisLines = YES;
+    self.myGraph.enableReferenceAxisFrame = YES;
+    self.myGraph.animationGraphStyle = BEMLineAnimationDraw;
+    
+
+
 }
+
 
 -(void) parseXml{
     
     NSError *error = nil;
     self.redTrailElevations = [[NSMutableArray alloc] init];
     self.downHillTrailElevations = [[NSMutableArray alloc] init];
+
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"elevations" ofType:@"xml"];
     
     // Load the file and check the result
@@ -135,4 +183,50 @@
 - (void) parserDidEndDocument:(NSXMLParser *)parser {
     NSLog(@"parserDidEndDocument");
 }
+
+
+#pragma mark - SimpleLineGraph Data Source
+
+- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
+    return (int)[self.redTrailElevations count];
+}
+
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
+    NSString *coord = self.redTrailElevations[index];
+    NSArray *coords = [coord componentsSeparatedByString:@","];
+
+    CGFloat y =  [coords[1] floatValue];
+    return  y;
+}
+
+#pragma mark - SimpleLineGraph Delegate
+
+- (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
+    return 1;
+}
+
+- (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
+    NSString *coord = self.redTrailElevations[index];
+    NSArray *coords = [coord componentsSeparatedByString:@","];
+    CGFloat x = roundf([coords[0] floatValue]);
+    NSString *xAxisLabel = [@(x) stringValue];
+    //return xAxisLabel;
+    
+    if (![self.usedXLabels containsObject:xAxisLabel]) {
+        [self.usedXLabels addObject:xAxisLabel];
+        self.xLabs[index] = xAxisLabel;
+    }
+    return self.xLabs[index];
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
+
+}
+
+
+
+- (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
+
+}
+
 @end

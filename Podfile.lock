@@ -1,10 +1,10 @@
 PODS:
-  - JBChartView (2.8.14)
+  - BEMSimpleLineGraph (3.3)
 
 DEPENDENCIES:
-  - JBChartView
+  - BEMSimpleLineGraph (= 3.3)
 
 SPEC CHECKSUMS:
-  JBChartView: e89eabe6aefabd863ea345f3cedbfb773674647c
+  BEMSimpleLineGraph: 7fc92cd65a5f91640f6624b11be96fe1f3d7f1cf
 
 COCOAPODS: 0.37.1

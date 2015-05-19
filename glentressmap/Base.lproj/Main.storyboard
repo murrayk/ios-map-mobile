@@ -140,8 +140,27 @@
                     <view key="view" contentMode="scaleToFill" id="rOi-4e-4II">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-u2-Cvz" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AKe-91-Y6G" id="TgO-mO-v69"/>
+                                    <outlet property="delegate" destination="AKe-91-Y6G" id="th0-Op-JW4"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="leading" secondItem="rOi-4e-4II" secondAttribute="leading" id="5sm-Ag-lg9"/>
+                            <constraint firstAttribute="trailing" secondItem="8nw-u2-Cvz" secondAttribute="trailing" id="G1Q-C0-V7U"/>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="top" secondItem="dIl-XE-RIw" secondAttribute="bottom" id="hIF-23-gG8"/>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="bottom" secondItem="GoQ-fD-5g4" secondAttribute="top" id="qSI-MF-umB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myGraph" destination="8nw-u2-Cvz" id="vtS-bK-r7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nF8-i3-CDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
