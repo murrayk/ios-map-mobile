@@ -110,7 +110,7 @@
         
         
     }
-}
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -202,7 +202,8 @@
 #pragma mark - SimpleLineGraph Delegate
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
-    return 1;
+    int count = [self.redTrailElevations count];
+    return count;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
@@ -211,12 +212,8 @@
     CGFloat x = roundf([coords[0] floatValue]);
     NSString *xAxisLabel = [@(x) stringValue];
     //return xAxisLabel;
-    
-    if (![self.usedXLabels containsObject:xAxisLabel]) {
-        [self.usedXLabels addObject:xAxisLabel];
-        self.xLabs[index] = xAxisLabel;
-    }
-    return self.xLabs[index];
+
+    return xAxisLabel;
 }
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
