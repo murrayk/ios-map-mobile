@@ -111,9 +111,9 @@
     shape.lineJoin = @"round";
     shape.lineCap = @"round";
     
-    for (NSArray *lineString in self.lineStrings){
+    for (NSArray *line in self.lineString){
         BOOL first = YES;
-        for (CLLocation *location in lineString){
+        for (CLLocation *location in line){
             if (first) {
                 first = false;
                 [shape moveToCoordinate:location.coordinate];

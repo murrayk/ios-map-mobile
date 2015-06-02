@@ -19,9 +19,6 @@
 @property(nonatomic, strong) NSString * stringArrayNameAttr;
 @property(nonatomic, strong) NSMutableArray * redTrailElevations;
 @property(nonatomic, strong) NSMutableArray * downHillTrailElevations;
-@property(nonatomic, strong) NSMutableArray * xLabs;
-@property(nonatomic, strong) NSMutableSet *usedXLabels;
-
 
 -(void) parseXml;
 
@@ -38,9 +35,6 @@
     
     
 
-    self.usedXLabels = [[NSMutableSet alloc]init];
-    
-    self.xLabs = [[NSMutableArray alloc] init];
     /* This is commented out because the graph is created in the interface with this sample app. However, the code remains as an example for creating the graph using code.
      BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];
      myGraph.delegate = self;
@@ -110,7 +104,7 @@
         
         
     }
-}
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

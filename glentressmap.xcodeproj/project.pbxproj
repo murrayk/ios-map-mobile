@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		724DF6741AD325CA0061B73B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DF6731AD325CA0061B73B /* MapViewController.m */; };
-		7265A8571AFF995200CBAF79 /* testjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 7265A8561AFF995200CBAF79 /* testjson.json */; };
+		7265A8571AFF995200CBAF79 /* xc.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7265A8561AFF995200CBAF79 /* xc.geojson */; };
 		729321731B08ACC600141FBD /* TerrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729321721B08ACC600141FBD /* TerrainViewController.m */; };
 		72A655A81AC9AD4E005B4C07 /* hd_inners.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 72A655A71AC9AD39005B4C07 /* hd_inners.mbtiles */; };
 		72C80F741AC98DD7001B602F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F731AC98DD7001B602F /* main.m */; };
@@ -25,6 +25,8 @@
 		72C815A41AC9914B001B602F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C815A31AC9914B001B602F /* libz.dylib */; };
 		72C815A51AC99170001B602F /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72C815991AC9909D001B602F /* Mapbox.bundle */; };
 		72CDC3401B0BDF6400FAD25C /* elevations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72CDC33F1B0BDF6400FAD25C /* elevations.xml */; };
+		72E708D51B1DD4FF00E2AA60 /* downhill.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E708D41B1DD4FF00E2AA60 /* downhill.geojson */; };
+		72E708D91B1E0DAB00E2AA60 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E708D81B1E0DAB00E2AA60 /* Route.m */; };
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
 		72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4C1AD1417E00D8E7AF /* red_icon.png */; };
 		7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
@@ -69,7 +71,7 @@
 		61A3736793BF6E002FE36424 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724DF6721AD325CA0061B73B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = glentressmap/MapViewController.h; sourceTree = "<group>"; };
 		724DF6731AD325CA0061B73B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = glentressmap/MapViewController.m; sourceTree = "<group>"; };
-		7265A8561AFF995200CBAF79 /* testjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testjson.json; sourceTree = "<group>"; };
+		7265A8561AFF995200CBAF79 /* xc.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xc.geojson; sourceTree = "<group>"; };
 		729321711B08ACC600141FBD /* TerrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrainViewController.h; sourceTree = "<group>"; };
 		729321721B08ACC600141FBD /* TerrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrainViewController.m; sourceTree = "<group>"; };
 		72A655A71AC9AD39005B4C07 /* hd_inners.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = hd_inners.mbtiles; sourceTree = "<group>"; };
@@ -94,6 +96,9 @@
 		72C815A61AC99370001B602F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72C815A81AC994DF001B602F /* glentressmap-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "glentressmap-prefix.pch"; sourceTree = "<group>"; };
 		72CDC33F1B0BDF6400FAD25C /* elevations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = elevations.xml; sourceTree = "<group>"; };
+		72E708D41B1DD4FF00E2AA60 /* downhill.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = downhill.geojson; sourceTree = "<group>"; };
+		72E708D71B1E0DAB00E2AA60 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		72E708D81B1E0DAB00E2AA60 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		72E88B4B1AD1417E00D8E7AF /* orange_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_icon.png; sourceTree = "<group>"; };
 		72E88B4C1AD1417E00D8E7AF /* red_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_icon.png; sourceTree = "<group>"; };
 		7DD5A15D1B03AD2400B95138 /* ic_action_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_search.png; sourceTree = "<group>"; };
@@ -146,7 +151,8 @@
 		72C80F651AC98DD7001B602F = {
 			isa = PBXGroup;
 			children = (
-				7265A8561AFF995200CBAF79 /* testjson.json */,
+				7265A8561AFF995200CBAF79 /* xc.geojson */,
+				72E708D41B1DD4FF00E2AA60 /* downhill.geojson */,
 				7DD5A1641B04BBF700B95138 /* strings.xml */,
 				72CDC33F1B0BDF6400FAD25C /* elevations.xml */,
 				724DF6721AD325CA0061B73B /* MapViewController.h */,
@@ -184,6 +190,8 @@
 				72C80F751AC98DD7001B602F /* AppDelegate.h */,
 				72C80F761AC98DD7001B602F /* AppDelegate.m */,
 				72C80F781AC98DD7001B602F /* ViewController.h */,
+				72E708D71B1E0DAB00E2AA60 /* Route.h */,
+				72E708D81B1E0DAB00E2AA60 /* Route.m */,
 				72C80F791AC98DD7001B602F /* ViewController.m */,
 				72C80F7B1AC98DD7001B602F /* Main.storyboard */,
 				7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */,
@@ -364,8 +372,9 @@
 				72C80F7D1AC98DD7001B602F /* Main.storyboard in Resources */,
 				72C80F821AC98DD7001B602F /* LaunchScreen.xib in Resources */,
 				72C80F7F1AC98DD7001B602F /* Images.xcassets in Resources */,
+				72E708D51B1DD4FF00E2AA60 /* downhill.geojson in Resources */,
 				72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */,
-				7265A8571AFF995200CBAF79 /* testjson.json in Resources */,
+				7265A8571AFF995200CBAF79 /* xc.geojson in Resources */,
 				72A655A81AC9AD4E005B4C07 /* hd_inners.mbtiles in Resources */,
 				72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */,
 			);
@@ -424,6 +433,7 @@
 				7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */,
 				72C80F741AC98DD7001B602F /* main.m in Sources */,
 				724DF6741AD325CA0061B73B /* MapViewController.m in Sources */,
+				72E708D91B1E0DAB00E2AA60 /* Route.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
