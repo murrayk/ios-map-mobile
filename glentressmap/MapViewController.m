@@ -32,13 +32,13 @@
     mapView.zoom = 15;
     mapView.maxZoom = 18;
     mapView.minZoom = 1;
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(55.5720,-3.0615);
-    mapView.centerCoordinate = center;
+    //CLLocationCoordinate2D center = CLLocationCoordinate2DMake(55.5720,-3.0615);
+    //mapView.centerCoordinate = center;
     
-    CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(55.6262,-2.9881);
-    CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(55.5694, -3.0815);
+    //CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(55.6262,-2.9881);
+    //CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(55.5694, -3.0815);
     
-    [mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:NO];
+    [mapView zoomWithLatitudeLongitudeBoundsSouthWest:self.route.bb.southWest northEast:self.route.bb.northEast animated:NO];
     
     mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
@@ -47,15 +47,17 @@
     [self.view addSubview:mapView];
     
     RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
-                                                          coordinate:center
+                                                          coordinate:self.route.center
                                                             andTitle:@"Home"];
     
     
     
     
     mapView.showLogoBug = NO;
-    annotation.coordinate = center;
+
     annotation.title      = @"anything";
+    
+
     mapView.delegate = self;
     
     
@@ -106,12 +108,13 @@
     RMShape *shape = [[RMShape alloc] initWithView:mapView];
     
     // set line color and width
-    shape.lineColor = [UIColor colorWithRed:0.224 green:0.671 blue:0.780 alpha:0.5];
+    shape.lineColor = self.route.color;
     shape.lineWidth = 8.0;
     shape.lineJoin = @"round";
     shape.lineCap = @"round";
     
-    for (NSArray *line in self.lineString){
+    
+    for (NSArray *line in self.route.lineString){
         BOOL first = YES;
         for (CLLocation *location in line){
             if (first) {
@@ -122,6 +125,7 @@
             }
         }
     }
+    
     
     return shape;
     

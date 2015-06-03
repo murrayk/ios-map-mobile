@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TrailLocationsViewController.h"
+#import "Route.h"
 @interface MapViewController : UIViewController<RMMapViewDelegate,TrailSelectionDelegate>
-@property (nonatomic, strong) NSArray *lineString;
+@property (nonatomic, strong)  Route *route;
+
 
 @property (nonatomic, strong) IBOutlet RMMapView *mapView;
 

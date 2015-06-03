@@ -24,14 +24,20 @@ NSMutableArray *lineStrings;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIColor *redWithAlpha = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
+    UIColor *orangeWithAlpha = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.5];
 
     Route *xc = [Route createRouteWithTitle:@"XC route"
-                                    detail:@"Expert mountain bike users,\n used to physically demanding routes. Quality off-road mountain bikes."
-                                    icon:@"red_icon.png" jsonFile:@"xc"];
+                                     detail:@"Expert mountain bike users,\n used to physically demanding routes. Quality off-road mountain bikes."
+                                       icon:@"red_icon.png"
+                                   jsonFile:@"xc"
+                                   color:redWithAlpha];
     
     Route *downhill = [Route createRouteWithTitle:@"Downhill Routes"
                                            detail:@"Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps."
-                                             icon:@"orange_icon.png" jsonFile:@"downhill"];
+                                             icon:@"orange_icon.png"
+                                            jsonFile:@"downhill"
+                                            color:orangeWithAlpha];
     
     routes = [NSArray arrayWithObjects:xc,downhill, nil];
 
@@ -77,7 +83,7 @@ NSMutableArray *lineStrings;
             Route *route = [routes objectAtIndex:indexPath.row];
             if([segue.identifier isEqualToString:@"mapview"]){
                 MapViewController *mvc = segue.destinationViewController;
-                mvc.lineString = route.lineString;
+                mvc.route = route;
                 
             }
         }
