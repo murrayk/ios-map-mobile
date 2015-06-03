@@ -9,6 +9,7 @@
 
 #import "MapViewController.h"
 #import "TrailLocationsViewController.h"
+#import "TerrainViewController.h"
 
 @interface MapViewController ()
 - (void)showTrailLocations;
@@ -48,7 +49,7 @@
     
     RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
                                                           coordinate:self.route.center
-                                                            andTitle:@"Home"];
+                                                            andTitle:@"Trail"];
     
     
     
@@ -78,8 +79,10 @@
     UIBarButtonItem *locateButton = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showTrailLocations)];
     UIBarButtonItem *terrainButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(showTerrain)];
-
-    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:terrainButton,searchButton, locateButton, nil] animated:NO];
+    UIImage *terrainIcon = [UIImage imageNamed:@"terrain"];
+    
+    UIBarButtonItem *terrainButt = [[UIBarButtonItem alloc] initWithImage:terrainIcon style:UIBarButtonItemStylePlain target:self action:@selector(showTerrain)];
+    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:terrainButt,searchButton, locateButton, nil] animated:NO];
     //move to location.
     
     //self.mapView.userTrackingMode = RMUserTrackingModeFollow;
@@ -152,6 +155,11 @@
      if ([segue.identifier isEqual:@"locations"]) {
          TrailLocationsViewController *tlvc = segue.destinationViewController;
          tlvc.delegate = self;
+         tlvc.route = self.route;
+     }
+     else if ([segue.identifier isEqual:@"terrain"]) {
+         TerrainViewController *tvc = segue.destinationViewController;
+         tvc.route = self.route;
      }
 
     

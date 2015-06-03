@@ -8,9 +8,12 @@
 
 #import "Route.h"
 #import "Mapbox.h"
+#import "ParseTrailLocations.h"
+#import "ParseTrailElevations.h"
+
 @implementation Route
 
-+ (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color{
++ (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *)locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *)elevationsStringArrayNameAttr {
     Route *route = [[Route alloc] init];
     route.title = title;
     route.details = detail;
@@ -23,12 +26,25 @@
     bb.northEast = ne;
     bb.southWest = sw;
     route.bb = bb;
+    
+
+    route.center = [Route findCenterOfBoundingBox:bb];
+    
+    ParseTrailLocations *tparser = [[ParseTrailLocations alloc] init];
+    NSArray *trails = [tparser parseXmlFile:@"trails" withBaseStringArrayNameAttr: locationsStringArrayNameAttr];
+    route.trailNameWithLocation = trails;
+    ParseTrailElevations *eparser = [[ParseTrailElevations alloc] init];
+    NSArray *elevations = [eparser parseXmlFile:@"elevations" withStringArrayNameAttr: elevationsStringArrayNameAttr];
+    route.elevations = elevations;
+    return route;
+    
+}
+
++(CLLocationCoordinate2D) findCenterOfBoundingBox:(BoundingBox) bb{
     CLLocationCoordinate2D center;
     center.latitude = (bb.northEast.latitude + bb.southWest.latitude)/2;
     center.longitude = (bb.northEast.longitude + bb.southWest.longitude)/2;
-    route.center = center;
-    return route;
-    
+    return center;
 }
 
 +(NSArray *) createLineStringRouteFromJson:(NSString *)jsonFile andReturnBoundingBoxSouthWest:(CLLocationCoordinate2D *) sw
@@ -50,6 +66,11 @@ ne:(CLLocationCoordinate2D *) ne {
     
     NSMutableArray *lineStrings = [[NSMutableArray alloc]init];
     NSArray *features = json[@"features"];
+    
+    if(error){
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    
     
     for (NSDictionary *dict in features ) {
         
@@ -80,8 +101,7 @@ ne:(CLLocationCoordinate2D *) ne {
     
         *ne = max;
     }
-    
-    
+
     return [lineStrings copy];
 }
 

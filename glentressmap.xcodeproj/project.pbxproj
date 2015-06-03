@@ -29,9 +29,13 @@
 		72E708D91B1E0DAB00E2AA60 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E708D81B1E0DAB00E2AA60 /* Route.m */; };
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
 		72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4C1AD1417E00D8E7AF /* red_icon.png */; };
+		7DB09C631B1F33610024AF21 /* ParseTrailLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB09C621B1F33610024AF21 /* ParseTrailLocations.m */; };
+		7DB09C671B1F3EC70024AF21 /* TrailNameAndLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB09C661B1F3EC70024AF21 /* TrailNameAndLocation.m */; };
+		7DB09C6A1B1F4D6B0024AF21 /* ParseTrailElevations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB09C691B1F4D6B0024AF21 /* ParseTrailElevations.m */; };
+		7DB09C6C1B1F5A730024AF21 /* terrain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */; };
 		7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
 		7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */; };
-		7DD5A1651B04BBF800B95138 /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* strings.xml */; };
+		7DD5A1651B04BBF800B95138 /* trails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* trails.xml */; };
 		E424B63AA12B5637C73E94BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 147EB3B4909AF5E97DCE264F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -101,10 +105,17 @@
 		72E708D81B1E0DAB00E2AA60 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		72E88B4B1AD1417E00D8E7AF /* orange_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_icon.png; sourceTree = "<group>"; };
 		72E88B4C1AD1417E00D8E7AF /* red_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_icon.png; sourceTree = "<group>"; };
+		7DB09C611B1F33610024AF21 /* ParseTrailLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTrailLocations.h; sourceTree = "<group>"; };
+		7DB09C621B1F33610024AF21 /* ParseTrailLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTrailLocations.m; sourceTree = "<group>"; };
+		7DB09C651B1F3EC70024AF21 /* TrailNameAndLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailNameAndLocation.h; sourceTree = "<group>"; };
+		7DB09C661B1F3EC70024AF21 /* TrailNameAndLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailNameAndLocation.m; sourceTree = "<group>"; };
+		7DB09C681B1F4D6B0024AF21 /* ParseTrailElevations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTrailElevations.h; sourceTree = "<group>"; };
+		7DB09C691B1F4D6B0024AF21 /* ParseTrailElevations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTrailElevations.m; sourceTree = "<group>"; };
+		7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "terrain@2x.png"; sourceTree = "<group>"; };
 		7DD5A15D1B03AD2400B95138 /* ic_action_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_search.png; sourceTree = "<group>"; };
 		7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailLocationsViewController.h; sourceTree = "<group>"; };
 		7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailLocationsViewController.m; sourceTree = "<group>"; };
-		7DD5A1641B04BBF700B95138 /* strings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
+		7DD5A1641B04BBF700B95138 /* trails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trails.xml; sourceTree = "<group>"; };
 		9588821B1B9222E123496B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				72A655A71AC9AD39005B4C07 /* hd_inners.mbtiles */,
+				7DB09C651B1F3EC70024AF21 /* TrailNameAndLocation.h */,
+				7DB09C661B1F3EC70024AF21 /* TrailNameAndLocation.m */,
+				7DB09C681B1F4D6B0024AF21 /* ParseTrailElevations.h */,
+				7DB09C691B1F4D6B0024AF21 /* ParseTrailElevations.m */,
 			);
 			name = maps;
 			sourceTree = "<group>";
@@ -153,7 +168,8 @@
 			children = (
 				7265A8561AFF995200CBAF79 /* xc.geojson */,
 				72E708D41B1DD4FF00E2AA60 /* downhill.geojson */,
-				7DD5A1641B04BBF700B95138 /* strings.xml */,
+				7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */,
+				7DD5A1641B04BBF700B95138 /* trails.xml */,
 				72CDC33F1B0BDF6400FAD25C /* elevations.xml */,
 				724DF6721AD325CA0061B73B /* MapViewController.h */,
 				724DF6731AD325CA0061B73B /* MapViewController.m */,
@@ -192,6 +208,8 @@
 				72C80F781AC98DD7001B602F /* ViewController.h */,
 				72E708D71B1E0DAB00E2AA60 /* Route.h */,
 				72E708D81B1E0DAB00E2AA60 /* Route.m */,
+				7DB09C611B1F33610024AF21 /* ParseTrailLocations.h */,
+				7DB09C621B1F33610024AF21 /* ParseTrailLocations.m */,
 				72C80F791AC98DD7001B602F /* ViewController.m */,
 				72C80F7B1AC98DD7001B602F /* Main.storyboard */,
 				7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */,
@@ -365,7 +383,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DD5A1651B04BBF800B95138 /* strings.xml in Resources */,
+				7DD5A1651B04BBF800B95138 /* trails.xml in Resources */,
+				7DB09C6C1B1F5A730024AF21 /* terrain@2x.png in Resources */,
 				7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */,
 				72CDC3401B0BDF6400FAD25C /* elevations.xml in Resources */,
 				72C815A51AC99170001B602F /* Mapbox.bundle in Resources */,
@@ -427,9 +446,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB09C6A1B1F4D6B0024AF21 /* ParseTrailElevations.m in Sources */,
 				72C80F7A1AC98DD7001B602F /* ViewController.m in Sources */,
 				72C80F771AC98DD7001B602F /* AppDelegate.m in Sources */,
 				729321731B08ACC600141FBD /* TerrainViewController.m in Sources */,
+				7DB09C631B1F33610024AF21 /* ParseTrailLocations.m in Sources */,
+				7DB09C671B1F3EC70024AF21 /* TrailNameAndLocation.m in Sources */,
 				7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */,
 				72C80F741AC98DD7001B602F /* main.m in Sources */,
 				724DF6741AD325CA0061B73B /* MapViewController.m in Sources */,

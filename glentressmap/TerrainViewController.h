@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Route.h"
 
 @interface TerrainViewController : UIViewController
+
+@property(nonatomic,strong) Route *route;
+
 
 @end

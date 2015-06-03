@@ -31,13 +31,17 @@ NSMutableArray *lineStrings;
                                      detail:@"Expert mountain bike users,\n used to physically demanding routes. Quality off-road mountain bikes."
                                        icon:@"red_icon.png"
                                    jsonFile:@"xc"
-                                   color:redWithAlpha];
+                                   color:redWithAlpha
+                                   locationsStringArrayNameAttr:@"red_inners_loc_"
+                                    elevationsStringArrayNameAttr:@"inners_xc"];
     
     Route *downhill = [Route createRouteWithTitle:@"Downhill Routes"
                                            detail:@"Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps."
                                              icon:@"orange_icon.png"
                                             jsonFile:@"downhill"
-                                            color:orangeWithAlpha];
+                                            color:orangeWithAlpha
+                                            locationsStringArrayNameAttr:@"inners_downhill_loc_"
+                                            elevationsStringArrayNameAttr:@"inners_downhill"];
     
     routes = [NSArray arrayWithObjects:xc,downhill, nil];
 
