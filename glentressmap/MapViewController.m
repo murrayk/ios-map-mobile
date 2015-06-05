@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.doneLocationSetup = NO;
     // Do any additional setup after loading the view.
     RMMBTilesSource *offlineSource = [[RMMBTilesSource alloc] initWithTileSetResource:@"hd_inners" ofType:@"mbtiles"];
     
@@ -39,7 +40,7 @@
     //CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(55.6262,-2.9881);
     //CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(55.5694, -3.0815);
     
-    [mapView zoomWithLatitudeLongitudeBoundsSouthWest:self.route.bb.southWest northEast:self.route.bb.northEast animated:NO];
+
     
     mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
@@ -78,12 +79,17 @@
     
     UIBarButtonItem *locateButton = [[RMUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showTrailLocations)];
-    UIBarButtonItem *terrainButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(showTerrain)];
+
     UIImage *terrainIcon = [UIImage imageNamed:@"terrain"];
     
-    UIBarButtonItem *terrainButt = [[UIBarButtonItem alloc] initWithImage:terrainIcon style:UIBarButtonItemStylePlain target:self action:@selector(showTerrain)];
-    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:terrainButt,searchButton, locateButton, nil] animated:NO];
+    UIBarButtonItem *terrainButton = [[UIBarButtonItem alloc] initWithImage:terrainIcon style:UIBarButtonItemStylePlain target:self action:@selector(showTerrain)];
+    [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:terrainButton,searchButton, locateButton, nil] animated:NO];
     //move to location.
+    
+    if(self.doneLocationSetup == NO){
+        [self.mapView zoomWithLatitudeLongitudeBoundsSouthWest:self.route.bb.southWest northEast:self.route.bb.northEast animated:YES];
+         self.doneLocationSetup = YES;
+    } 
     
     //self.mapView.userTrackingMode = RMUserTrackingModeFollow;
 }

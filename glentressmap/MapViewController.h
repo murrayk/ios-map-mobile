@@ -15,5 +15,5 @@
 
 @property (nonatomic, strong) IBOutlet RMMapView *mapView;
 
-
+@property (nonatomic,assign) BOOL doneLocationSetup;
 @end
