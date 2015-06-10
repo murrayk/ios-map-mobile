@@ -12,7 +12,6 @@
 #import "MapViewController.h"
 #import "Route.h"
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
