@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    if ([splitViewController respondsToSelector:@selector(displayModeButtonItem)]) {
+        UIBarButtonItem * displayModeButton = splitViewController.displayModeButtonItem;
+        navigationController.topViewController.navigationItem.leftBarButtonItem = displayModeButton ;
+
+    }
+     splitViewController.delegate = self;
     return YES;
 }
 
@@ -42,4 +53,29 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Split view
+
+
+
+- (void) splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem{
+
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    
+    navigationController.topViewController.navigationItem.leftBarButtonItem = barButtonItem;
+    
+    NSLog(@"barbuttonItem %@", barButtonItem);
+}
+
+
+- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc{
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    
+    navigationController.topViewController.navigationItem.leftBarButtonItem = barButtonItem;
+    self.displayModeButton = barButtonItem;
+    NSLog(@"barbuttonItem %@", barButtonItem);
+
+}
 @end
+
