@@ -10,6 +10,7 @@
 
 @interface ViewController : UITableViewController 
 
+@property(nonatomic, strong) NSArray *routes;
 
 
 @end

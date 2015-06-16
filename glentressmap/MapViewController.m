@@ -23,7 +23,7 @@
     [super viewDidLoad];
     self.doneLocationSetup = NO;
     // Do any additional setup after loading the view.
-    RMMBTilesSource *offlineSource = [[RMMBTilesSource alloc] initWithTileSetResource:@"hd_inners" ofType:@"mbtiles"];
+    RMMBTilesSource *offlineSource = [[RMMBTilesSource alloc] initWithTileSetResource:@"maptiles" ofType:@"mbtiles"];
     
     RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:offlineSource];
     

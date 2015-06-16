@@ -15,10 +15,11 @@
 
 @interface ViewController ()
 
+
 @end
 
 @implementation ViewController
-NSArray *routes;
+
 NSArray *icons;
 NSArray *detail;
 NSMutableArray *lineStrings;
@@ -27,28 +28,36 @@ NSMutableArray *lineStrings;
     [super viewDidLoad];
     UIColor *redWithAlpha = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
     UIColor *orangeWithAlpha = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.5];
+    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"routes_config" ofType:@"plist"];
+    NSDictionary *root = [[NSDictionary alloc] initWithContentsOfFile:plistLocation];
+    
+    
     
     Route *xc = [Route createRouteWithTitle:@"XC route"
                                      detail:@"Expert mountain bike users,\n used to physically demanding routes. Quality off-road mountain bikes."
                                        icon:@"red_icon.png"
                                    jsonFile:@"xc"
-                                      color:redWithAlpha
-               locationsStringArrayNameAttr:@"red_inners_loc_"
-              elevationsStringArrayNameAttr:@"inners_xc"];
+                                   color:redWithAlpha
+                                   locationsStringArrayNameAttr:@"red_inners_loc_"
+                                    elevationsStringArrayNameAttr:@"inners_xc"];
     
-    Route *downhill = [Route createRouteWithTitle:@"Downhill Routes"
-                                           detail:@"Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps."
+    
+   Route *downhill = [Route createRouteWithTitle:@"Downhill Routes"
+    detail:@"Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps."
                                              icon:@"orange_icon.png"
-                                         jsonFile:@"downhill"
+                                            jsonFile:@"downhill"
                                             color:orangeWithAlpha
-                     locationsStringArrayNameAttr:@"inners_downhill_loc_"
-                    elevationsStringArrayNameAttr:@"inners_downhill"];
+                                            locationsStringArrayNameAttr:@"inners_downhill_loc_"
+                                            elevationsStringArrayNameAttr:@"inners_downhill"];
     
-    routes = [NSArray arrayWithObjects:xc,downhill, nil];
+    self.routes = [NSArray arrayWithObjects:xc,downhill, nil];
+
     
     
     
     [[RMConfiguration sharedInstance] setAccessToken:@"pk.eyJ1IjoibXVycmF5aGtpbmciLCJhIjoiZVVfeGhqNCJ9.WJaoPywqu21-rgRkQJqsKQ"];
+       
+
     
     self.navigationItem.title = @"newTitle";
     
@@ -56,7 +65,7 @@ NSMutableArray *lineStrings;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [routes count];
+    return [self.routes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,7 +79,7 @@ NSMutableArray *lineStrings;
     }
     
     
-    Route *route = [routes objectAtIndex:indexPath.row];
+    Route *route = [self.routes objectAtIndex:indexPath.row];
     cell.textLabel.text = route.title;
     cell.imageView.image = route.icon;
     cell.detailTextLabel.text = route.details;
@@ -84,12 +93,13 @@ NSMutableArray *lineStrings;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([sender isKindOfClass:[UITableViewCell class]]){
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+   
         
         if(indexPath) {
-            Route *route = [routes objectAtIndex:indexPath.row];
+            Route *route = [self.routes objectAtIndex:indexPath.row];
             if([segue.identifier isEqualToString:@"mapview"]){
-                
+ 
                 
                 UIViewController *controller = [segue destinationViewController];
                 if (![controller isKindOfClass:[MapViewController class]]) {
