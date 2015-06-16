@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		724DF6741AD325CA0061B73B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DF6731AD325CA0061B73B /* MapViewController.m */; };
+		725129381B2E24C500AFE811 /* routes_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 725129371B2E24C500AFE811 /* routes_config.plist */; };
 		7265A8571AFF995200CBAF79 /* xc.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7265A8561AFF995200CBAF79 /* xc.geojson */; };
 		729321731B08ACC600141FBD /* TerrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729321721B08ACC600141FBD /* TerrainViewController.m */; };
-		72A655A81AC9AD4E005B4C07 /* hd_inners.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 72A655A71AC9AD39005B4C07 /* hd_inners.mbtiles */; };
+		72A655A81AC9AD4E005B4C07 /* maptiles.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 72A655A71AC9AD39005B4C07 /* maptiles.mbtiles */; };
 		72C80F741AC98DD7001B602F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F731AC98DD7001B602F /* main.m */; };
 		72C80F771AC98DD7001B602F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F761AC98DD7001B602F /* AppDelegate.m */; };
 		72C80F7A1AC98DD7001B602F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F791AC98DD7001B602F /* ViewController.m */; };
@@ -25,6 +26,35 @@
 		72C815A41AC9914B001B602F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C815A31AC9914B001B602F /* libz.dylib */; };
 		72C815A51AC99170001B602F /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72C815991AC9909D001B602F /* Mapbox.bundle */; };
 		72CDC3401B0BDF6400FAD25C /* elevations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72CDC33F1B0BDF6400FAD25C /* elevations.xml */; };
+		72D4114A1B2311AD00498A98 /* ParseTrailElevations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB09C691B1F4D6B0024AF21 /* ParseTrailElevations.m */; };
+		72D4114B1B2311AD00498A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F791AC98DD7001B602F /* ViewController.m */; };
+		72D4114C1B2311AD00498A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F761AC98DD7001B602F /* AppDelegate.m */; };
+		72D4114D1B2311AD00498A98 /* TerrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729321721B08ACC600141FBD /* TerrainViewController.m */; };
+		72D4114E1B2311AD00498A98 /* ParseTrailLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB09C621B1F33610024AF21 /* ParseTrailLocations.m */; };
+		72D4114F1B2311AD00498A98 /* TrailNameAndLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB09C661B1F3EC70024AF21 /* TrailNameAndLocation.m */; };
+		72D411501B2311AD00498A98 /* TrailLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */; };
+		72D411511B2311AD00498A98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C80F731AC98DD7001B602F /* main.m */; };
+		72D411521B2311AD00498A98 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DF6731AD325CA0061B73B /* MapViewController.m */; };
+		72D411531B2311AD00498A98 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E708D81B1E0DAB00E2AA60 /* Route.m */; };
+		72D411551B2311AD00498A98 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C815A31AC9914B001B602F /* libz.dylib */; };
+		72D411561B2311AD00498A98 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C815A11AC9913F001B602F /* libsqlite3.dylib */; };
+		72D411571B2311AD00498A98 /* libMapbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C815971AC9909D001B602F /* libMapbox.a */; };
+		72D411581B2311AD00498A98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C8159E1AC99126001B602F /* QuartzCore.framework */; };
+		72D411591B2311AD00498A98 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C8159C1AC9911A001B602F /* CoreLocation.framework */; };
+		72D4115A1B2311AD00498A98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 147EB3B4909AF5E97DCE264F /* libPods.a */; };
+		72D4115C1B2311AD00498A98 /* trails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* trails.xml */; };
+		72D4115D1B2311AD00498A98 /* terrain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */; };
+		72D4115E1B2311AD00498A98 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
+		72D4115F1B2311AD00498A98 /* elevations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72CDC33F1B0BDF6400FAD25C /* elevations.xml */; };
+		72D411601B2311AD00498A98 /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72C815991AC9909D001B602F /* Mapbox.bundle */; };
+		72D411611B2311AD00498A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C80F7B1AC98DD7001B602F /* Main.storyboard */; };
+		72D411621B2311AD00498A98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C80F801AC98DD7001B602F /* LaunchScreen.xib */; };
+		72D411631B2311AD00498A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C80F7E1AC98DD7001B602F /* Images.xcassets */; };
+		72D411641B2311AD00498A98 /* downhill.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E708D41B1DD4FF00E2AA60 /* downhill.geojson */; };
+		72D411651B2311AD00498A98 /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
+		72D411661B2311AD00498A98 /* xc.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7265A8561AFF995200CBAF79 /* xc.geojson */; };
+		72D411681B2311AD00498A98 /* red_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4C1AD1417E00D8E7AF /* red_icon.png */; };
+		72D411711B23164100498A98 /* maptiles.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 72D411701B23164100498A98 /* maptiles.mbtiles */; };
 		72E708D51B1DD4FF00E2AA60 /* downhill.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E708D41B1DD4FF00E2AA60 /* downhill.geojson */; };
 		72E708D91B1E0DAB00E2AA60 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E708D81B1E0DAB00E2AA60 /* Route.m */; };
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
@@ -68,6 +98,13 @@
 			remoteGlobalIDString = B8C974130E8A19B2007D16AD;
 			remoteInfo = MapView;
 		};
+		72D411471B2311AD00498A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72C815911AC9909D001B602F /* MapView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C974130E8A19B2007D16AD;
+			remoteInfo = MapView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -75,11 +112,12 @@
 		61A3736793BF6E002FE36424 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		724DF6721AD325CA0061B73B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = glentressmap/MapViewController.h; sourceTree = "<group>"; };
 		724DF6731AD325CA0061B73B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = glentressmap/MapViewController.m; sourceTree = "<group>"; };
+		725129371B2E24C500AFE811 /* routes_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = routes_config.plist; sourceTree = "<group>"; };
 		7265A8561AFF995200CBAF79 /* xc.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xc.geojson; sourceTree = "<group>"; };
 		729321711B08ACC600141FBD /* TerrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrainViewController.h; sourceTree = "<group>"; };
 		729321721B08ACC600141FBD /* TerrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrainViewController.m; sourceTree = "<group>"; };
-		72A655A71AC9AD39005B4C07 /* hd_inners.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = hd_inners.mbtiles; sourceTree = "<group>"; };
-		72C80F6E1AC98DD7001B602F /* glentressmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glentressmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A655A71AC9AD39005B4C07 /* maptiles.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = maptiles.mbtiles; sourceTree = "<group>"; };
+		72C80F6E1AC98DD7001B602F /* inners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inners.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C80F721AC98DD7001B602F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C80F731AC98DD7001B602F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72C80F751AC98DD7001B602F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +138,9 @@
 		72C815A61AC99370001B602F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72C815A81AC994DF001B602F /* glentressmap-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "glentressmap-prefix.pch"; sourceTree = "<group>"; };
 		72CDC33F1B0BDF6400FAD25C /* elevations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = elevations.xml; sourceTree = "<group>"; };
+		72D4116D1B2311AD00498A98 /* glentressmap copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "glentressmap copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D4116E1B2311AD00498A98 /* glentressmap copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "glentressmap copy-Info.plist"; path = "/Users/murray/ios-map-mobile/glentressmap copy-Info.plist"; sourceTree = "<absolute>"; };
+		72D411701B23164100498A98 /* maptiles.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = maptiles.mbtiles; sourceTree = "<group>"; };
 		72E708D41B1DD4FF00E2AA60 /* downhill.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = downhill.geojson; sourceTree = "<group>"; };
 		72E708D71B1E0DAB00E2AA60 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		72E708D81B1E0DAB00E2AA60 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
@@ -140,6 +181,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72D411541B2311AD00498A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D411551B2311AD00498A98 /* libz.dylib in Frameworks */,
+				72D411561B2311AD00498A98 /* libsqlite3.dylib in Frameworks */,
+				72D411571B2311AD00498A98 /* libMapbox.a in Frameworks */,
+				72D411581B2311AD00498A98 /* QuartzCore.framework in Frameworks */,
+				72D411591B2311AD00498A98 /* CoreLocation.framework in Frameworks */,
+				72D4115A1B2311AD00498A98 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -154,7 +208,7 @@
 		72A655A51AC9AD0A005B4C07 /* maps */ = {
 			isa = PBXGroup;
 			children = (
-				72A655A71AC9AD39005B4C07 /* hd_inners.mbtiles */,
+				72A655A71AC9AD39005B4C07 /* maptiles.mbtiles */,
 				7DB09C651B1F3EC70024AF21 /* TrailNameAndLocation.h */,
 				7DB09C661B1F3EC70024AF21 /* TrailNameAndLocation.m */,
 				7DB09C681B1F4D6B0024AF21 /* ParseTrailElevations.h */,
@@ -166,6 +220,8 @@
 		72C80F651AC98DD7001B602F = {
 			isa = PBXGroup;
 			children = (
+				725129371B2E24C500AFE811 /* routes_config.plist */,
+				72D411701B23164100498A98 /* maptiles.mbtiles */,
 				7265A8561AFF995200CBAF79 /* xc.geojson */,
 				72E708D41B1DD4FF00E2AA60 /* downhill.geojson */,
 				7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */,
@@ -186,14 +242,16 @@
 				72C80F6F1AC98DD7001B602F /* Products */,
 				FB2D69532FABAEEB760BE0BD /* Pods */,
 				61929C1777C52396B95AE78D /* Frameworks */,
+				72D4116E1B2311AD00498A98 /* glentressmap copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		72C80F6F1AC98DD7001B602F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72C80F6E1AC98DD7001B602F /* glentressmap.app */,
+				72C80F6E1AC98DD7001B602F /* inners.app */,
 				72C80F871AC98DD7001B602F /* glentressmapTests.xctest */,
+				72D4116D1B2311AD00498A98 /* glentressmap copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,9 +337,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		72C80F6D1AC98DD7001B602F /* glentressmap */ = {
+		72C80F6D1AC98DD7001B602F /* inners */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 72C80F911AC98DD7001B602F /* Build configuration list for PBXNativeTarget "glentressmap" */;
+			buildConfigurationList = 72C80F911AC98DD7001B602F /* Build configuration list for PBXNativeTarget "inners" */;
 			buildPhases = (
 				51ED8DA1B9E44EE00A8D13FA /* Check Pods Manifest.lock */,
 				72C80F6A1AC98DD7001B602F /* Sources */,
@@ -294,9 +352,9 @@
 			dependencies = (
 				72C8159B1AC990ED001B602F /* PBXTargetDependency */,
 			);
-			name = glentressmap;
+			name = inners;
 			productName = glentressmap;
-			productReference = 72C80F6E1AC98DD7001B602F /* glentressmap.app */;
+			productReference = 72C80F6E1AC98DD7001B602F /* inners.app */;
 			productType = "com.apple.product-type.application";
 		};
 		72C80F861AC98DD7001B602F /* glentressmapTests */ = {
@@ -316,6 +374,26 @@
 			productName = glentressmapTests;
 			productReference = 72C80F871AC98DD7001B602F /* glentressmapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		72D411451B2311AD00498A98 /* glentressmap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72D4116A1B2311AD00498A98 /* Build configuration list for PBXNativeTarget "glentressmap" */;
+			buildPhases = (
+				72D411481B2311AD00498A98 /* Check Pods Manifest.lock */,
+				72D411491B2311AD00498A98 /* Sources */,
+				72D411541B2311AD00498A98 /* Frameworks */,
+				72D4115B1B2311AD00498A98 /* Resources */,
+				72D411691B2311AD00498A98 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72D411461B2311AD00498A98 /* PBXTargetDependency */,
+			);
+			name = glentressmap;
+			productName = glentressmap;
+			productReference = 72D4116D1B2311AD00498A98 /* glentressmap copy.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -355,8 +433,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				72C80F6D1AC98DD7001B602F /* glentressmap */,
+				72C80F6D1AC98DD7001B602F /* inners */,
 				72C80F861AC98DD7001B602F /* glentressmapTests */,
+				72D411451B2311AD00498A98 /* glentressmap */,
 			);
 		};
 /* End PBXProject section */
@@ -385,6 +464,7 @@
 			files = (
 				7DD5A1651B04BBF800B95138 /* trails.xml in Resources */,
 				7DB09C6C1B1F5A730024AF21 /* terrain@2x.png in Resources */,
+				725129381B2E24C500AFE811 /* routes_config.plist in Resources */,
 				7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */,
 				72CDC3401B0BDF6400FAD25C /* elevations.xml in Resources */,
 				72C815A51AC99170001B602F /* Mapbox.bundle in Resources */,
@@ -394,7 +474,7 @@
 				72E708D51B1DD4FF00E2AA60 /* downhill.geojson in Resources */,
 				72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */,
 				7265A8571AFF995200CBAF79 /* xc.geojson in Resources */,
-				72A655A81AC9AD4E005B4C07 /* hd_inners.mbtiles in Resources */,
+				72A655A81AC9AD4E005B4C07 /* maptiles.mbtiles in Resources */,
 				72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +483,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72D4115B1B2311AD00498A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D4115C1B2311AD00498A98 /* trails.xml in Resources */,
+				72D4115D1B2311AD00498A98 /* terrain@2x.png in Resources */,
+				72D4115E1B2311AD00498A98 /* ic_action_search.png in Resources */,
+				72D4115F1B2311AD00498A98 /* elevations.xml in Resources */,
+				72D411601B2311AD00498A98 /* Mapbox.bundle in Resources */,
+				72D411611B2311AD00498A98 /* Main.storyboard in Resources */,
+				72D411621B2311AD00498A98 /* LaunchScreen.xib in Resources */,
+				72D411711B23164100498A98 /* maptiles.mbtiles in Resources */,
+				72D411631B2311AD00498A98 /* Images.xcassets in Resources */,
+				72D411641B2311AD00498A98 /* downhill.geojson in Resources */,
+				72D411651B2311AD00498A98 /* orange_icon.png in Resources */,
+				72D411661B2311AD00498A98 /* xc.geojson in Resources */,
+				72D411681B2311AD00498A98 /* red_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +522,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72D411481B2311AD00498A98 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72D411691B2311AD00498A98 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF65149700736D44F54D4A2E /* Copy Pods Resources */ = {
@@ -467,18 +597,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72D411491B2311AD00498A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D4114A1B2311AD00498A98 /* ParseTrailElevations.m in Sources */,
+				72D4114B1B2311AD00498A98 /* ViewController.m in Sources */,
+				72D4114C1B2311AD00498A98 /* AppDelegate.m in Sources */,
+				72D4114D1B2311AD00498A98 /* TerrainViewController.m in Sources */,
+				72D4114E1B2311AD00498A98 /* ParseTrailLocations.m in Sources */,
+				72D4114F1B2311AD00498A98 /* TrailNameAndLocation.m in Sources */,
+				72D411501B2311AD00498A98 /* TrailLocationsViewController.m in Sources */,
+				72D411511B2311AD00498A98 /* main.m in Sources */,
+				72D411521B2311AD00498A98 /* MapViewController.m in Sources */,
+				72D411531B2311AD00498A98 /* Route.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		72C80F891AC98DD7001B602F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 72C80F6D1AC98DD7001B602F /* glentressmap */;
+			target = 72C80F6D1AC98DD7001B602F /* inners */;
 			targetProxy = 72C80F881AC98DD7001B602F /* PBXContainerItemProxy */;
 		};
 		72C8159B1AC990ED001B602F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MapView;
 			targetProxy = 72C8159A1AC990ED001B602F /* PBXContainerItemProxy */;
+		};
+		72D411461B2311AD00498A98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapView;
+			targetProxy = 72D411471B2311AD00498A98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -596,7 +748,7 @@
 					"\"$(SRCROOT)/Mapbox-iOS-SDK\"/**",
 				);
 				INFOPLIST_FILE = glentressmap/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,7 +761,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -629,7 +781,7 @@
 					"\"$(SRCROOT)/Mapbox-iOS-SDK\"/**",
 				);
 				INFOPLIST_FILE = glentressmap/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -642,7 +794,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -680,6 +832,72 @@
 			};
 			name = Release;
 		};
+		72D4116B1B2311AD00498A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9588821B1B9222E123496B1A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "glentressmap-prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/Mapbox-iOS-SDK\"/**",
+				);
+				INFOPLIST_FILE = "glentressmap copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/murray/glentress/mapbox-ios-sdk/MapView/Map/GRMustache/lib",
+					"/Users/murray/glentress/mapbox-ios-sdk/Proj4",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "glentressmap copy";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		72D4116C1B2311AD00498A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A3736793BF6E002FE36424 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "glentressmap-prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/Mapbox-iOS-SDK\"/**",
+				);
+				INFOPLIST_FILE = "glentressmap copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/murray/glentress/mapbox-ios-sdk/MapView/Map/GRMustache/lib",
+					"/Users/murray/glentress/mapbox-ios-sdk/Proj4",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "glentressmap copy";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -692,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		72C80F911AC98DD7001B602F /* Build configuration list for PBXNativeTarget "glentressmap" */ = {
+		72C80F911AC98DD7001B602F /* Build configuration list for PBXNativeTarget "inners" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				72C80F921AC98DD7001B602F /* Debug */,
@@ -706,6 +924,15 @@
 			buildConfigurations = (
 				72C80F951AC98DD7001B602F /* Debug */,
 				72C80F961AC98DD7001B602F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72D4116A1B2311AD00498A98 /* Build configuration list for PBXNativeTarget "glentressmap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D4116B1B2311AD00498A98 /* Debug */,
+				72D4116C1B2311AD00498A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

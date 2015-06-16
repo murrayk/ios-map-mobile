@@ -12,7 +12,7 @@
 #import "MapViewController.h"
 #import "Route.h"
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
@@ -26,7 +26,10 @@ NSMutableArray *lineStrings;
     [super viewDidLoad];
     UIColor *redWithAlpha = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
     UIColor *orangeWithAlpha = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.5];
-
+    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"routes_config" ofType:@"plist"];
+    NSDictionary *root = [[NSDictionary alloc] initWithContentsOfFile:plistLocation];
+    NSArray *routes = [root objectForKey:@"routes"];
+    
     Route *xc = [Route createRouteWithTitle:@"XC route"
                                      detail:@"Expert mountain bike users,\n used to physically demanding routes. Quality off-road mountain bikes."
                                        icon:@"red_icon.png"
