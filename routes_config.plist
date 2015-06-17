@@ -14,12 +14,29 @@
 			<key>jsonFile</key>
 			<string>xc</string>
 			<key>color</key>
-			<integer>0</integer>
+			<string>red</string>
 			<key>locationsStringArrayNameAttr</key>
 			<string>red_inners_loc_</string>
 			<key>elevationsStringArrayNameAttr</key>
 			<string>inners_xc</string>
 		</dict>
+        <dict>
+            <key>title</key>
+            <string>Downhill Routes</string>
+            <key>detail</key>
+            <string>Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps.</string>
+            <key>icon</key>
+            <string>orange_icon.png</string>
+            <key>jsonFile</key>
+            <string>downhill</string>
+            <key>color</key>
+            <string>orange</string>
+            <key>locationsStringArrayNameAttr</key>
+            <string>inners_downhill_loc_</string>
+            <key>elevationsStringArrayNameAttr</key>
+            <string>inners_downhill</string>
+        </dict>
 	</array>
+    
 </dict>
 </plist>

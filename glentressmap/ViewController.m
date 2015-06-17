@@ -24,36 +24,42 @@ NSArray *icons;
 NSArray *detail;
 NSMutableArray *lineStrings;
 
+
+- (NSMutableArray*) routes
+{
+    if (!_routes){
+        _routes = [[NSMutableArray alloc] init];
+    }
+    return _routes;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIColor *redWithAlpha = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
-    UIColor *orangeWithAlpha = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.5];
-    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"routes_config" ofType:@"plist"];
-    NSDictionary *root = [[NSDictionary alloc] initWithContentsOfFile:plistLocation];
-    
-    
-    
-    Route *xc = [Route createRouteWithTitle:@"XC route"
-                                     detail:@"Expert mountain bike users,\n used to physically demanding routes. Quality off-road mountain bikes."
-                                       icon:@"red_icon.png"
-                                   jsonFile:@"xc"
-                                   color:redWithAlpha
-                                   locationsStringArrayNameAttr:@"red_inners_loc_"
-                                    elevationsStringArrayNameAttr:@"inners_xc"];
-    
-    
-   Route *downhill = [Route createRouteWithTitle:@"Downhill Routes"
-    detail:@"Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps."
-                                             icon:@"orange_icon.png"
-                                            jsonFile:@"downhill"
-                                            color:orangeWithAlpha
-                                            locationsStringArrayNameAttr:@"inners_downhill_loc_"
-                                            elevationsStringArrayNameAttr:@"inners_downhill"];
-    
-    self.routes = [NSArray arrayWithObjects:xc,downhill, nil];
 
     
+    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"routes_config" ofType:@"plist"];
+    NSArray *routes = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"routes"];
     
+    for (NSDictionary *r in routes) {
+        
+        
+        Route *route = [Route createRouteWithTitle:r[@"title"]
+                                         detail:r[@"detail"]
+                                           icon:r[@"icon"]
+                                       jsonFile:r[@"jsonFile"]
+                                          color:r[@"color"]
+                   locationsStringArrayNameAttr:r[@"locationsStringArrayNameAttr"]
+                  elevationsStringArrayNameAttr:r[@"elevationsStringArrayNameAttr"]];
+        
+        [self.routes addObject:route];
+        
+    }
+    
+
+    
+
+    
+    //not sure if we need a key
     
     [[RMConfiguration sharedInstance] setAccessToken:@"pk.eyJ1IjoibXVycmF5aGtpbmciLCJhIjoiZVVfeGhqNCJ9.WJaoPywqu21-rgRkQJqsKQ"];
        

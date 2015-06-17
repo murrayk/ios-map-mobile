@@ -13,7 +13,25 @@
 
 @implementation Route
 
+NSDictionary *colors = nil;
+
++ (void)initialize {
+    if(!colors){
+        
+        UIColor *redWithAlpha = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
+        UIColor *orangeWithAlpha = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.5];
+        colors = @{
+                    @"red" :redWithAlpha,
+                    @"orange" : orangeWithAlpha,
+                    @"blue" : redWithAlpha,
+                    @"green" : redWithAlpha,
+                    @"black" : redWithAlpha
+                    };
+    }
+}
 + (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *)locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *)elevationsStringArrayNameAttr {
+    
+
     Route *route = [[Route alloc] init];
     route.title = title;
     route.details = detail;
@@ -21,7 +39,7 @@
     CLLocationCoordinate2D  sw;
     CLLocationCoordinate2D  ne;
     route.lineString = [Route createLineStringRouteFromJson:jsonFile andReturnBoundingBoxSouthWest:&sw ne:&ne];
-    route.color = color;
+    route.color = colors[color];
     BoundingBox bb;
     bb.northEast = ne;
     bb.southWest = sw;
