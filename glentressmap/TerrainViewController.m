@@ -26,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    [self setTitle:@"Terrain"];
 
     /* This is commented out because the graph is created in the interface with this sample app. However, the code remains as an example for creating the graph using code.
      BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];

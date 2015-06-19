@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Mapbox.h>
 #import "Route.h"
+#import "TrailNameAndLocation.h"
 
 @protocol TrailSelectionDelegate;
 
@@ -18,5 +19,5 @@
 @end
 
 @protocol TrailSelectionDelegate
-- (void)TrailLocationsViewControllerDidFinish:(TrailLocationsViewController*)secondViewController moveToCoord:(CLLocationCoordinate2D) location;
+- (void)TrailLocationsViewControllerDidFinish:(TrailLocationsViewController*)secondViewController moveTrailNameAndLocation:(TrailNameAndLocation *) location;
 @end

@@ -112,14 +112,9 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
     TrailNameAndLocation *tl = [self.route.trailNameWithLocation objectAtIndex:indexPath.row];
-    NSString *coord = tl.location;
-    NSArray *coords = [coord componentsSeparatedByString:@","];
-    
-    double lon = [coords[0] doubleValue];
-    double lat =  [coords[1] doubleValue];
-    
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(lat,lon);
-    [self.delegate TrailLocationsViewControllerDidFinish:self moveToCoord:location];
+
+ 
+    [self.delegate TrailLocationsViewControllerDidFinish:self moveTrailNameAndLocation:tl];
 }
 
 

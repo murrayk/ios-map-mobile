@@ -65,7 +65,7 @@ NSMutableArray *lineStrings;
        
 
     
-    self.navigationItem.title = @"newTitle";
+    self.navigationItem.title = @"Trails";
     
     
 }

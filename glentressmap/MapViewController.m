@@ -140,15 +140,22 @@
     
 }
 
-- (void)TrailLocationsViewControllerDidFinish:(TrailLocationsViewController *)secondViewController moveToCoord:(CLLocationCoordinate2D)location{
+- (void)TrailLocationsViewControllerDidFinish:(TrailLocationsViewController *)secondViewController moveTrailNameAndLocation:(TrailNameAndLocation *)tl{
     self.mapView.zoom = 17;
     
+    NSString *coord = tl.location;
+    NSArray *coords = [coord componentsSeparatedByString:@","];
+    
+    double lon = [coords[0] doubleValue];
+    double lat =  [coords[1] doubleValue];
+    
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(lat,lon);
     self.mapView.centerCoordinate = location;
     
     RMPointAnnotation *annotation = [[RMPointAnnotation alloc]
                                      initWithMapView:self.mapView
                                      coordinate:location
-                                     andTitle:@"Hello, world!"];
+                                     andTitle:tl.trailName];
 
     [self.mapView addAnnotation:annotation];
     //
