@@ -167,24 +167,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-u2-Cvz" customClass="BEMSimpleLineGraphView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="217" width="600" height="383"/>
+                                <color key="backgroundColor" red="1" green="0.96559838382560215" blue="0.1714633137979843" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="AKe-91-Y6G" id="TgO-mO-v69"/>
                                     <outlet property="delegate" destination="AKe-91-Y6G" id="th0-Op-JW4"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TO3-oA-O2L">
+                                <rect key="frame" x="0.0" y="64" width="600" height="153"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-oX-7cM">
+                                        <rect key="frame" x="24" y="20" width="559" height="113"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.1376340919300415" blue="0.12993800271788258" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="blQ-oX-7cM" firstAttribute="centerY" secondItem="TO3-oA-O2L" secondAttribute="centerY" id="9ty-2O-1Ue"/>
+                                    <constraint firstAttribute="trailing" secondItem="blQ-oX-7cM" secondAttribute="trailing" constant="17" id="Lrt-0o-z5J"/>
+                                    <constraint firstItem="blQ-oX-7cM" firstAttribute="leading" secondItem="TO3-oA-O2L" secondAttribute="leading" constant="24" id="Mze-mq-xim"/>
+                                    <constraint firstItem="blQ-oX-7cM" firstAttribute="top" secondItem="TO3-oA-O2L" secondAttribute="top" constant="20" id="xkT-iH-kZg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="leading" secondItem="rOi-4e-4II" secondAttribute="leading" id="5sm-Ag-lg9"/>
-                            <constraint firstAttribute="trailing" secondItem="8nw-u2-Cvz" secondAttribute="trailing" id="G1Q-C0-V7U"/>
-                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="top" secondItem="dIl-XE-RIw" secondAttribute="bottom" id="hIF-23-gG8"/>
-                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="bottom" secondItem="GoQ-fD-5g4" secondAttribute="top" id="qSI-MF-umB"/>
+                            <constraint firstItem="TO3-oA-O2L" firstAttribute="leading" secondItem="rOi-4e-4II" secondAttribute="leading" id="1fr-Re-6dO"/>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="top" secondItem="rOi-4e-4II" secondAttribute="top" constant="217" id="1q6-Rm-nGB"/>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="trailing" secondItem="TO3-oA-O2L" secondAttribute="trailing" id="4cP-vY-tIq"/>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="top" secondItem="TO3-oA-O2L" secondAttribute="bottom" id="HVL-lw-No0"/>
+                            <constraint firstItem="TO3-oA-O2L" firstAttribute="top" secondItem="dIl-XE-RIw" secondAttribute="bottom" id="QMs-IC-2n2"/>
+                            <constraint firstAttribute="trailing" secondItem="8nw-u2-Cvz" secondAttribute="trailing" id="X0b-HD-TVS"/>
+                            <constraint firstItem="TO3-oA-O2L" firstAttribute="leading" secondItem="8nw-u2-Cvz" secondAttribute="leading" id="fiJ-RL-2CQ"/>
+                            <constraint firstItem="8nw-u2-Cvz" firstAttribute="bottom" secondItem="GoQ-fD-5g4" secondAttribute="top" id="yYk-Ck-265"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myGraph" destination="8nw-u2-Cvz" id="vtS-bK-r7V"/>
+                        <outlet property="routeInfo" destination="blQ-oX-7cM" id="kzl-nX-f8n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nF8-i3-CDj" userLabel="First Responder" sceneMemberID="firstResponder"/>

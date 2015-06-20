@@ -32,7 +32,7 @@ NSDictionary *colors = nil;
                     };
     }
 }
-+ (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *)locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *)elevationsStringArrayNameAttr {
++ (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *)locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *)elevationsStringArrayNameAttr routeInfo:(NSString *)routeInfo{
     
 
     Route *route = [[Route alloc] init];
@@ -47,6 +47,7 @@ NSDictionary *colors = nil;
     bb.northEast = ne;
     bb.southWest = sw;
     route.bb = bb;
+    route.routeInfo = routeInfo;
     
 
     route.center = [Route findCenterOfBoundingBox:bb];

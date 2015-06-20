@@ -15,6 +15,7 @@
     
 }
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *myGraph;
+@property (weak, nonatomic) IBOutlet UITextView *routeInfo;
 
 @end
 
@@ -59,7 +60,9 @@
     self.myGraph.enableReferenceYAxisLines = YES;
     self.myGraph.enableReferenceAxisFrame = YES;
     self.myGraph.animationGraphStyle = BEMLineAnimationDraw;
-    
+    NSString *htmlString = self.route.routeInfo;
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    self.routeInfo.attributedText = attributedString;
 
 
 }

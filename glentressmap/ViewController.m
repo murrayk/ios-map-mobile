@@ -49,7 +49,8 @@ NSMutableArray *lineStrings;
                                        jsonFile:r[@"jsonFile"]
                                           color:r[@"color"]
                    locationsStringArrayNameAttr:r[@"locationsStringArrayNameAttr"]
-                  elevationsStringArrayNameAttr:r[@"elevationsStringArrayNameAttr"]];
+                  elevationsStringArrayNameAttr:r[@"elevationsStringArrayNameAttr"]
+                                         routeInfo:r[@"routeInfo"]];
         
         [self.routes addObject:route];
         

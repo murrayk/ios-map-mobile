@@ -16,7 +16,7 @@ typedef struct {
 
 @interface Route : NSObject
 
-+ (Route *)createRouteWithTitle:(NSString *) title detail:(NSString *)detail icon:(NSString *) icon jsonFile:(NSString *) jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *) locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *) elevationsStringArrayNameAttr;
++ (Route *)createRouteWithTitle:(NSString *) title detail:(NSString *)detail icon:(NSString *) icon jsonFile:(NSString *) jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *) locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *) elevationsStringArrayNameAttr routeInfo:(NSString *) routeInfo;
 +(NSArray *)createLineStringRouteFromJson:(NSString *) jsonFile  andReturnBoundingBoxSouthWest:(CLLocationCoordinate2D *) sw
 ne:(CLLocationCoordinate2D *) ne ;
 
@@ -31,6 +31,7 @@ ne:(CLLocationCoordinate2D *) ne ;
 @property (nonatomic) CLLocationCoordinate2D center;
 @property (nonatomic,strong) NSArray *trailNameWithLocation;
 @property (nonatomic, strong) NSArray *elevations;
+@property (nonatomic, strong)NSString *routeInfo;
 
 
 @end

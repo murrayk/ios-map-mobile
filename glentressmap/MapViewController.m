@@ -35,11 +35,7 @@
     mapView.zoom = 15;
     mapView.maxZoom = 18;
     mapView.minZoom = 1;
-    //CLLocationCoordinate2D center = CLLocationCoordinate2DMake(55.5720,-3.0615);
-    //mapView.centerCoordinate = center;
-    
-    //CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(55.6262,-2.9881);
-    //CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(55.5694, -3.0815);
+
     
     CGRect bounds = self.mapHolder.bounds;
     
