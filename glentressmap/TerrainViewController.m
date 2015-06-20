@@ -61,7 +61,10 @@
     self.myGraph.enableReferenceAxisFrame = YES;
     self.myGraph.animationGraphStyle = BEMLineAnimationDraw;
     NSString *htmlString = self.route.routeInfo;
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    
+    NSString *routeInfoWithStyle =[NSString stringWithFormat: @"<span style='font-size:13px; font-family:Arial, Helvetica, sans-serif' >%@</span>", htmlString];
+    
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[routeInfoWithStyle dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
     self.routeInfo.attributedText = attributedString;
 
 
