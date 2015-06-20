@@ -13,6 +13,7 @@
 
 @interface MapViewController ()
 - (void)showTrailLocations;
+@property (weak, nonatomic) IBOutlet UIView *mapHolder;
 
 - (void)showTerrain;
 @end
@@ -40,13 +41,13 @@
     //CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(55.6262,-2.9881);
     //CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(55.5694, -3.0815);
     
-
+    CGRect bounds = self.mapHolder.bounds;
     
-    mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    mapView.bounds = bounds;
     
     mapView.adjustTilesForRetinaDisplay = NO; //use hd map
     mapView.hideAttribution = YES;
-    [self.view addSubview:mapView];
+    [self.mapHolder addSubview:mapView];
     
     RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
                                                           coordinate:self.route.center

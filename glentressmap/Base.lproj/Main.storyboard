@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Trails-->
@@ -62,10 +63,23 @@
                     <view key="view" contentMode="scaleToFill" id="pHK-2p-fLn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfw-to-7CN" userLabel="MapHolder">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="0.54119281973964561" blue="0.54759327495620647" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dfw-to-7CN" firstAttribute="top" secondItem="VLl-wY-J6s" secondAttribute="bottom" id="58S-98-OkX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Dfw-to-7CN" secondAttribute="bottom" constant="-64" id="Yh5-7M-ef6"/>
+                            <constraint firstAttribute="trailing" secondItem="Dfw-to-7CN" secondAttribute="trailing" id="cIK-pT-45U"/>
+                            <constraint firstItem="Dfw-to-7CN" firstAttribute="leading" secondItem="pHK-2p-fLn" secondAttribute="leading" id="jdm-q6-cRM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x5w-eJ-c1R"/>
                     <connections>
+                        <outlet property="mapHolder" destination="Dfw-to-7CN" id="S8b-1Y-iK7"/>
                         <segue destination="Aq7-xs-MXl" kind="show" identifier="locations" id="Nu0-R8-4ca"/>
                         <segue destination="AKe-91-Y6G" kind="show" identifier="terrain" id="opo-Sc-Jfk"/>
                     </connections>

@@ -20,12 +20,15 @@ NSDictionary *colors = nil;
         
         UIColor *redWithAlpha = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
         UIColor *orangeWithAlpha = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.5];
+        UIColor *greenWithAlpha = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.5];
+        UIColor *blueWithAlpha = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
+        UIColor *blackWithAlpha = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
         colors = @{
                     @"red" :redWithAlpha,
                     @"orange" : orangeWithAlpha,
-                    @"blue" : redWithAlpha,
-                    @"green" : redWithAlpha,
-                    @"black" : redWithAlpha
+                    @"blue" : blueWithAlpha,
+                    @"green" : greenWithAlpha,
+                    @"black" : blackWithAlpha
                     };
     }
 }

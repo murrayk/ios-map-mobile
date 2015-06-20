@@ -6,36 +6,101 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Green Route (Easy)</string>
+			<string>Green Route test (Easy)</string>
 			<key>detail</key>
 			<string>Beginner/novice cyclists. Basic bike skills required. Most bikes and hybrids. Some green routes can take trailers.</string>
 			<key>icon</key>
 			<string>green_icon.png</string>
 			<key>jsonFile</key>
-			<string>xc</string>
+			<string>green</string>
 			<key>color</key>
-			<string>red</string>
+			<string>green</string>
 			<key>locationsStringArrayNameAttr</key>
-			<string>red_inners_loc_</string>
+			<string>green_loc_</string>
 			<key>elevationsStringArrayNameAttr</key>
-			<string>inners_xc</string>
+			<string>green</string>
 		</dict>
+               <dict>
+            <key>title</key>
+            <string>Blue Route (Moderate)</string>
+            <key>detail</key>
+            <string>Intermediate cyclist/mountain bikers with basic offroad riding skills. Mountain bikes and hybrids.</string>
+            <key>icon</key>
+            <string>blue_icon.png</string>
+            <key>jsonFile</key>
+            <string>blue</string>
+            <key>color</key>
+            <string>blue</string>
+            <key>locationsStringArrayNameAttr</key>
+            <string>blue_loc_</string>
+            <key>elevationsStringArrayNameAttr</key>
+            <string>blue</string>
+        </dict>
         <dict>
             <key>title</key>
-            <string>Downhill Routes</string>
+            <string>Red Route (Difficult)</string>
             <key>detail</key>
-            <string>Downhill Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps.</string>
+            <string>Proficient mountain bikers with good off-road riding skills. Suitable for better quality off-road mountain bikes.</string>
+            <key>icon</key>
+            <string>red_icon.png</string>
+            <key>jsonFile</key>
+            <string>red</string>
+            <key>color</key>
+            <string>red</string>
+            <key>locationsStringArrayNameAttr</key>
+            <string>red_loc_</string>
+            <key>elevationsStringArrayNameAttr</key>
+            <string>red</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>Black Route (Severe)</string>
+            <key>detail</key>
+            <string>Expert mountain bike users, used to physically demanding routes. Quality off-road mountain bikes.</string>
+            <key>icon</key>
+            <string>black_icon.png</string>
+            <key>jsonFile</key>
+            <string>black</string>
+            <key>color</key>
+            <string>black</string>
+            <key>locationsStringArrayNameAttr</key>
+            <string>black_loc_</string>
+            <key>elevationsStringArrayNameAttr</key>
+            <string>black</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>Bike Park (Extreme)</string>
+            <key>detail</key>
+            <string>Bike Park, Riders aspiring to athlete level of technical ability, incorporates everything from full on downhill riding to big-air jumps.</string>
             <key>icon</key>
             <string>orange_icon.png</string>
             <key>jsonFile</key>
-            <string>downhill</string>
+            <string>bike_park</string>
             <key>color</key>
             <string>orange</string>
             <key>locationsStringArrayNameAttr</key>
-            <string>inners_downhill_loc_</string>
+            <string>bike_park_loc_</string>
             <key>elevationsStringArrayNameAttr</key>
-            <string>inners_downhill</string>
+            <string>green</string>
         </dict>
+        <dict>
+            <key>title</key>
+            <string>Green Skills Area (Easy)</string>
+            <key>detail</key>
+            <string>Beginner/novice cyclists. Basic bike skills required. Most bikes and hybrids. Some green routes can take trailers.</string>
+            <key>icon</key>
+            <string>green_icon.png</string>
+            <key>jsonFile</key>
+            <string>green_skills</string>
+            <key>color</key>
+            <string>green</string>
+            <key>locationsStringArrayNameAttr</key>
+            <string>bike_park_loc_</string>
+            <key>elevationsStringArrayNameAttr</key>
+            <string>green</string>
+        </dict>
+
 	</array>
     
 </dict>

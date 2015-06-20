@@ -52,16 +52,20 @@
 		72D4115C1B2311AD00498A98 /* trails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* trails.xml */; };
 		72D4115D1B2311AD00498A98 /* terrain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */; };
 		72D4115E1B2311AD00498A98 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
-		72D4115F1B2311AD00498A98 /* elevations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72CDC33F1B0BDF6400FAD25C /* elevations.xml */; };
 		72D411601B2311AD00498A98 /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72C815991AC9909D001B602F /* Mapbox.bundle */; };
 		72D411611B2311AD00498A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C80F7B1AC98DD7001B602F /* Main.storyboard */; };
 		72D411621B2311AD00498A98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C80F801AC98DD7001B602F /* LaunchScreen.xib */; };
 		72D411631B2311AD00498A98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C80F7E1AC98DD7001B602F /* Images.xcassets */; };
-		72D411641B2311AD00498A98 /* downhill.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E708D41B1DD4FF00E2AA60 /* downhill.geojson */; };
 		72D411651B2311AD00498A98 /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
-		72D411661B2311AD00498A98 /* xc.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7265A8561AFF995200CBAF79 /* xc.geojson */; };
 		72D411681B2311AD00498A98 /* red_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4C1AD1417E00D8E7AF /* red_icon.png */; };
 		72E316601B348CE900FF3EEA /* maptiles.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 72E3165F1B348CE900FF3EEA /* maptiles.mbtiles */; };
+		72E316621B3498F200FF3EEA /* green.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316611B3498F200FF3EEA /* green.geojson */; };
+		72E316641B355E1100FF3EEA /* elevations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72E316631B355E1000FF3EEA /* elevations.xml */; };
+		72E3166A1B356BEC00FF3EEA /* bike_park.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316651B356BEC00FF3EEA /* bike_park.geojson */; };
+		72E3166B1B356BEC00FF3EEA /* black.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316661B356BEC00FF3EEA /* black.geojson */; };
+		72E3166C1B356BEC00FF3EEA /* blue.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316671B356BEC00FF3EEA /* blue.geojson */; };
+		72E3166D1B356BEC00FF3EEA /* green_skills.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316681B356BEC00FF3EEA /* green_skills.geojson */; };
+		72E3166E1B356BEC00FF3EEA /* red.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316691B356BEC00FF3EEA /* red.geojson */; };
 		72E708D51B1DD4FF00E2AA60 /* downhill.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E708D41B1DD4FF00E2AA60 /* downhill.geojson */; };
 		72E708D91B1E0DAB00E2AA60 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E708D81B1E0DAB00E2AA60 /* Route.m */; };
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
@@ -152,6 +156,13 @@
 		72D4116D1B2311AD00498A98 /* glentressmap copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "glentressmap copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D4116E1B2311AD00498A98 /* glentressmap copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "glentressmap copy-Info.plist"; path = "/Users/murray/ios-map-mobile/glentressmap copy-Info.plist"; sourceTree = "<absolute>"; };
 		72E3165F1B348CE900FF3EEA /* maptiles.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = maptiles.mbtiles; sourceTree = "<group>"; };
+		72E316611B3498F200FF3EEA /* green.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = green.geojson; sourceTree = "<group>"; };
+		72E316631B355E1000FF3EEA /* elevations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = elevations.xml; sourceTree = "<group>"; };
+		72E316651B356BEC00FF3EEA /* bike_park.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bike_park.geojson; sourceTree = "<group>"; };
+		72E316661B356BEC00FF3EEA /* black.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = black.geojson; sourceTree = "<group>"; };
+		72E316671B356BEC00FF3EEA /* blue.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blue.geojson; sourceTree = "<group>"; };
+		72E316681B356BEC00FF3EEA /* green_skills.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = green_skills.geojson; sourceTree = "<group>"; };
+		72E316691B356BEC00FF3EEA /* red.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = red.geojson; sourceTree = "<group>"; };
 		72E708D41B1DD4FF00E2AA60 /* downhill.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = downhill.geojson; sourceTree = "<group>"; };
 		72E708D71B1E0DAB00E2AA60 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		72E708D81B1E0DAB00E2AA60 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
@@ -229,6 +240,13 @@
 		722298D61B333598004C4D7B /* glentress */ = {
 			isa = PBXGroup;
 			children = (
+				72E316651B356BEC00FF3EEA /* bike_park.geojson */,
+				72E316661B356BEC00FF3EEA /* black.geojson */,
+				72E316671B356BEC00FF3EEA /* blue.geojson */,
+				72E316681B356BEC00FF3EEA /* green_skills.geojson */,
+				72E316691B356BEC00FF3EEA /* red.geojson */,
+				72E316611B3498F200FF3EEA /* green.geojson */,
+				72E316631B355E1000FF3EEA /* elevations.xml */,
 				722298E11B333821004C4D7B /* routes_config.plist */,
 				722298D71B333598004C4D7B /* maptiles.mbtiles */,
 			);
@@ -238,7 +256,10 @@
 		722298D81B333598004C4D7B /* inners */ = {
 			isa = PBXGroup;
 			children = (
+				7265A8561AFF995200CBAF79 /* xc.geojson */,
+				72E708D41B1DD4FF00E2AA60 /* downhill.geojson */,
 				72E3165F1B348CE900FF3EEA /* maptiles.mbtiles */,
+				72CDC33F1B0BDF6400FAD25C /* elevations.xml */,
 				722298DE1B3336FF004C4D7B /* routes_config.plist */,
 			);
 			path = inners;
@@ -259,11 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				722298D51B333598004C4D7B /* mbtiles */,
-				7265A8561AFF995200CBAF79 /* xc.geojson */,
-				72E708D41B1DD4FF00E2AA60 /* downhill.geojson */,
 				7DB09C6B1B1F5A730024AF21 /* terrain@2x.png */,
 				7DD5A1641B04BBF700B95138 /* trails.xml */,
-				72CDC33F1B0BDF6400FAD25C /* elevations.xml */,
 				724DF6721AD325CA0061B73B /* MapViewController.h */,
 				724DF6731AD325CA0061B73B /* MapViewController.m */,
 				72C815A81AC994DF001B602F /* glentressmap-prefix.pch */,
@@ -536,20 +554,24 @@
 				72D4115C1B2311AD00498A98 /* trails.xml in Resources */,
 				72D4115D1B2311AD00498A98 /* terrain@2x.png in Resources */,
 				72D4115E1B2311AD00498A98 /* ic_action_search.png in Resources */,
-				72D4115F1B2311AD00498A98 /* elevations.xml in Resources */,
 				722298EB1B3338C5004C4D7B /* blue_icon.png in Resources */,
 				722298E31B333821004C4D7B /* routes_config.plist in Resources */,
+				72E3166D1B356BEC00FF3EEA /* green_skills.geojson in Resources */,
+				72E3166E1B356BEC00FF3EEA /* red.geojson in Resources */,
+				72E3166B1B356BEC00FF3EEA /* black.geojson in Resources */,
 				72D411601B2311AD00498A98 /* Mapbox.bundle in Resources */,
 				722298E91B3338C5004C4D7B /* black_icon.png in Resources */,
 				72D411611B2311AD00498A98 /* Main.storyboard in Resources */,
 				72D411621B2311AD00498A98 /* LaunchScreen.xib in Resources */,
 				722298ED1B3338C5004C4D7B /* green_icon.png in Resources */,
 				722298DB1B333598004C4D7B /* maptiles.mbtiles in Resources */,
+				72E316641B355E1100FF3EEA /* elevations.xml in Resources */,
 				72D411631B2311AD00498A98 /* Images.xcassets in Resources */,
-				72D411641B2311AD00498A98 /* downhill.geojson in Resources */,
+				72E316621B3498F200FF3EEA /* green.geojson in Resources */,
+				72E3166C1B356BEC00FF3EEA /* blue.geojson in Resources */,
 				72D411651B2311AD00498A98 /* orange_icon.png in Resources */,
-				72D411661B2311AD00498A98 /* xc.geojson in Resources */,
 				72D411681B2311AD00498A98 /* red_icon.png in Resources */,
+				72E3166A1B356BEC00FF3EEA /* bike_park.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
