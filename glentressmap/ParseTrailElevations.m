@@ -70,7 +70,7 @@
 #pragma mark - xml sax parser
 
 - (void) parserDidStartDocument:(NSXMLParser *)parser {
-    NSLog(@"parserDidStartDocument");
+   // NSLog(@"parserDidStartDocument");
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -84,7 +84,7 @@
     }
     
     
-    NSLog(@"didStartElement --> %@", elementName);
+   // NSLog(@"didStartElement --> %@", elementName);
 }
 
 -(void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
@@ -95,7 +95,7 @@
         return;
     }
     
-    NSLog(@"foundCharacters --> %@", string);
+    //NSLog(@"foundCharacters --> %@", string);
     if (inStringArrayTag && inItemTag) {
         if ([self.currentStringArrayNameAttr  isEqualToString:self.stringArrayNameAttr]) {
             [self.elevations addObject:string];
@@ -107,7 +107,7 @@
 
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    NSLog(@"didEndElement   --> %@", elementName);
+    //NSLog(@"didEndElement   --> %@", elementName);
     if ([elementName caseInsensitiveCompare:@"string-array"] == 0) {
         inStringArrayTag = NO;
     }
@@ -117,7 +117,7 @@
 }
 
 - (void) parserDidEndDocument:(NSXMLParser *)parser {
-    NSLog(@"parserDidEndDocument");
+    //NSLog(@"parserDidEndDocument");
 }
 
 

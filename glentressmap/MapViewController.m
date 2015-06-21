@@ -36,10 +36,8 @@
     mapView.maxZoom = 18;
     mapView.minZoom = 1;
 
-    
-    CGRect bounds = self.mapHolder.bounds;
-    
-    mapView.bounds = bounds;
+    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
+
     
     mapView.adjustTilesForRetinaDisplay = NO; //use hd map
     mapView.hideAttribution = YES;
@@ -111,6 +109,12 @@
     if (annotation.isUserLocationAnnotation)
         return nil;
     
+    
+    if ([annotation.userInfo isEqualToString:@"marker"])
+    {
+       return [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"red-pin.png" ] anchorPoint:CGPointMake(0.5, 1.0)];
+    }
+    
     RMShape *shape = [[RMShape alloc] initWithView:mapView];
     
     // set line color and width
@@ -132,6 +136,7 @@
         }
     }
     
+
     
     return shape;
     
@@ -149,11 +154,11 @@
     CLLocationCoordinate2D location = CLLocationCoordinate2DMake(lat,lon);
     self.mapView.centerCoordinate = location;
     
-    RMPointAnnotation *annotation = [[RMPointAnnotation alloc]
-                                     initWithMapView:self.mapView
-                                     coordinate:location
-                                     andTitle:tl.trailName];
-
+    RMAnnotation *annotation = [[RMAnnotation alloc]
+                                 initWithMapView:self.mapView
+                                 coordinate:location
+                                 andTitle:tl.trailName];
+    annotation.userInfo = @"marker";
     [self.mapView addAnnotation:annotation];
     //
 }

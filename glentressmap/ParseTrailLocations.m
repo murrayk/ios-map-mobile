@@ -86,7 +86,7 @@
     }
     
     
-    NSLog(@"didStartElement --> %@", elementName);
+    //NSLog(@"didStartElement --> %@", elementName);
 }
 
 -(void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
