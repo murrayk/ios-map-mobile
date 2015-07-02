@@ -825,11 +825,7 @@
 				INFOPLIST_FILE = glentressmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/murray/glentress/mapbox-ios-sdk/MapView/Map/GRMustache/lib",
-					"/Users/murray/glentress/mapbox-ios-sdk/Proj4",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
@@ -858,11 +854,7 @@
 				INFOPLIST_FILE = glentressmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/murray/glentress/mapbox-ios-sdk/MapView/Map/GRMustache/lib",
-					"/Users/murray/glentress/mapbox-ios-sdk/Proj4",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",

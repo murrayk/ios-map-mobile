@@ -19,6 +19,8 @@
 			<string>red_inners_loc_</string>
 			<key>elevationsStringArrayNameAttr</key>
 			<string>inners_xc</string>
+            <key>routeInfo</key>
+            <string><![CDATA[<b>Grade:</b> Red &mdash; Difficult<br/><b>Distance</b>: 19Km<br/><b>Singletrack</b>: 75%<br/><b>Estimated Time</b>: 2 &mdash; 4 hrs ]]></string>
 		</dict>
         <dict>
             <key>title</key>
@@ -35,6 +37,8 @@
             <string>inners_downhill_loc_</string>
             <key>elevationsStringArrayNameAttr</key>
             <string>inners_downhill</string>
+            <key>routeInfo</key>
+            <string><![CDATA[<b>Grade:</b> Orange &mdash; Extreme ]]></string>
         </dict>
 	</array>
     
