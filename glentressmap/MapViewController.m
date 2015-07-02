@@ -110,9 +110,8 @@
         return nil;
     
     
-    if ([annotation.userInfo isEqualToString:@"marker"])
-    {
-       return [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"red-pin.png" ] anchorPoint:CGPointMake(0.5, 1.0)];
+    if ([annotation.userInfo isEqualToString:@"marker"]){
+       return [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:self.route.markerIcon ] anchorPoint:CGPointMake(0.5, 1.0)];
     }
     
     RMShape *shape = [[RMShape alloc] initWithView:mapView];

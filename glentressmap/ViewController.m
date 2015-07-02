@@ -50,7 +50,8 @@ NSMutableArray *lineStrings;
                                           color:r[@"color"]
                    locationsStringArrayNameAttr:r[@"locationsStringArrayNameAttr"]
                   elevationsStringArrayNameAttr:r[@"elevationsStringArrayNameAttr"]
-                                         routeInfo:r[@"routeInfo"]];
+                                         routeInfo:r[@"routeInfo"]
+                                         markerIcon:r[@"markerIcon"]];
         
         [self.routes addObject:route];
         

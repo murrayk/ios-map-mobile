@@ -16,6 +16,7 @@
 }
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *myGraph;
 @property (weak, nonatomic) IBOutlet UITextView *routeInfo;
+@property (weak, nonatomic) IBOutlet UIView *textViewContainer;
 
 @end
 
@@ -66,7 +67,7 @@
     
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[routeInfoWithStyle dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
     self.routeInfo.attributedText = attributedString;
-
+    self.textViewContainer.backgroundColor = self.route.color;
 
 }
 

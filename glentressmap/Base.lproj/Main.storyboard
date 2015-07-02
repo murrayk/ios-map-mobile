@@ -209,6 +209,7 @@
                     <connections>
                         <outlet property="myGraph" destination="8nw-u2-Cvz" id="vtS-bK-r7V"/>
                         <outlet property="routeInfo" destination="blQ-oX-7cM" id="kzl-nX-f8n"/>
+                        <outlet property="textViewContainer" destination="TO3-oA-O2L" id="cDP-M4-sGZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nF8-i3-CDj" userLabel="First Responder" sceneMemberID="firstResponder"/>

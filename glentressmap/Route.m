@@ -32,7 +32,8 @@ NSDictionary *colors = nil;
                     };
     }
 }
-+ (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *)locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *)elevationsStringArrayNameAttr routeInfo:(NSString *)routeInfo{
+
++ (Route *)createRouteWithTitle:(NSString *)title detail:(NSString *)detail icon:(NSString *)icon jsonFile:(NSString *)jsonFile color:(UIColor *) color locationsStringArrayNameAttr:(NSString *)locationsStringArrayNameAttr elevationsStringArrayNameAttr:(NSString *)elevationsStringArrayNameAttr routeInfo:(NSString *)routeInfo markerIcon:(NSString *)markerIcon {
     
 
     Route *route = [[Route alloc] init];
@@ -58,6 +59,8 @@ NSDictionary *colors = nil;
     ParseTrailElevations *eparser = [[ParseTrailElevations alloc] init];
     NSArray *elevations = [eparser parseXmlFile:@"elevations" withStringArrayNameAttr: elevationsStringArrayNameAttr];
     route.elevations = elevations;
+    
+    route.markerIcon = markerIcon;
     return route;
     
 }

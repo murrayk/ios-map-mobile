@@ -66,8 +66,6 @@
 		72E3166C1B356BEC00FF3EEA /* blue.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316671B356BEC00FF3EEA /* blue.geojson */; };
 		72E3166D1B356BEC00FF3EEA /* green_skills.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316681B356BEC00FF3EEA /* green_skills.geojson */; };
 		72E3166E1B356BEC00FF3EEA /* red.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E316691B356BEC00FF3EEA /* red.geojson */; };
-		72E316711B35D9FC00FF3EEA /* red-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E316701B35D9FC00FF3EEA /* red-pin.png */; };
-		72E316721B35D9FC00FF3EEA /* red-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E316701B35D9FC00FF3EEA /* red-pin.png */; };
 		72E708D51B1DD4FF00E2AA60 /* downhill.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 72E708D41B1DD4FF00E2AA60 /* downhill.geojson */; };
 		72E708D91B1E0DAB00E2AA60 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E708D81B1E0DAB00E2AA60 /* Route.m */; };
 		72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E88B4B1AD1417E00D8E7AF /* orange_icon.png */; };
@@ -79,6 +77,16 @@
 		7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A15D1B03AD2400B95138 /* ic_action_search.png */; };
 		7DD5A1611B04AF6900B95138 /* TrailLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */; };
 		7DD5A1651B04BBF800B95138 /* trails.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5A1641B04BBF700B95138 /* trails.xml */; };
+		7DF64E3E1B455DB600CB4E76 /* red-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E391B455DB600CB4E76 /* red-pin.png */; };
+		7DF64E3F1B455DB600CB4E76 /* red-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E391B455DB600CB4E76 /* red-pin.png */; };
+		7DF64E401B455DB600CB4E76 /* orange-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3A1B455DB600CB4E76 /* orange-pin.png */; };
+		7DF64E411B455DB600CB4E76 /* orange-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3A1B455DB600CB4E76 /* orange-pin.png */; };
+		7DF64E421B455DB600CB4E76 /* blue-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3B1B455DB600CB4E76 /* blue-pin.png */; };
+		7DF64E431B455DB600CB4E76 /* blue-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3B1B455DB600CB4E76 /* blue-pin.png */; };
+		7DF64E441B455DB600CB4E76 /* green-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3C1B455DB600CB4E76 /* green-pin.png */; };
+		7DF64E451B455DB600CB4E76 /* green-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3C1B455DB600CB4E76 /* green-pin.png */; };
+		7DF64E461B455DB600CB4E76 /* black-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3D1B455DB600CB4E76 /* black-pin.png */; };
+		7DF64E471B455DB600CB4E76 /* black-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF64E3D1B455DB600CB4E76 /* black-pin.png */; };
 		E424B63AA12B5637C73E94BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 147EB3B4909AF5E97DCE264F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -165,7 +173,6 @@
 		72E316671B356BEC00FF3EEA /* blue.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blue.geojson; sourceTree = "<group>"; };
 		72E316681B356BEC00FF3EEA /* green_skills.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = green_skills.geojson; sourceTree = "<group>"; };
 		72E316691B356BEC00FF3EEA /* red.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = red.geojson; sourceTree = "<group>"; };
-		72E316701B35D9FC00FF3EEA /* red-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-pin.png"; sourceTree = "<group>"; };
 		72E708D41B1DD4FF00E2AA60 /* downhill.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = downhill.geojson; sourceTree = "<group>"; };
 		72E708D71B1E0DAB00E2AA60 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		72E708D81B1E0DAB00E2AA60 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
@@ -182,6 +189,11 @@
 		7DD5A15F1B04AF6900B95138 /* TrailLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailLocationsViewController.h; sourceTree = "<group>"; };
 		7DD5A1601B04AF6900B95138 /* TrailLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailLocationsViewController.m; sourceTree = "<group>"; };
 		7DD5A1641B04BBF700B95138 /* trails.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trails.xml; sourceTree = "<group>"; };
+		7DF64E391B455DB600CB4E76 /* red-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-pin.png"; sourceTree = "<group>"; };
+		7DF64E3A1B455DB600CB4E76 /* orange-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-pin.png"; sourceTree = "<group>"; };
+		7DF64E3B1B455DB600CB4E76 /* blue-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-pin.png"; sourceTree = "<group>"; };
+		7DF64E3C1B455DB600CB4E76 /* green-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-pin.png"; sourceTree = "<group>"; };
+		7DF64E3D1B455DB600CB4E76 /* black-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-pin.png"; sourceTree = "<group>"; };
 		9588821B1B9222E123496B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -377,7 +389,11 @@
 		72E88B491AD1416A00D8E7AF /* images */ = {
 			isa = PBXGroup;
 			children = (
-				72E316701B35D9FC00FF3EEA /* red-pin.png */,
+				7DF64E391B455DB600CB4E76 /* red-pin.png */,
+				7DF64E3A1B455DB600CB4E76 /* orange-pin.png */,
+				7DF64E3B1B455DB600CB4E76 /* blue-pin.png */,
+				7DF64E3C1B455DB600CB4E76 /* green-pin.png */,
+				7DF64E3D1B455DB600CB4E76 /* black-pin.png */,
 				722298E51B3338C5004C4D7B /* black_icon.png */,
 				722298E61B3338C5004C4D7B /* blue_icon.png */,
 				722298E71B3338C5004C4D7B /* green_icon.png */,
@@ -526,10 +542,13 @@
 			files = (
 				7DD5A1651B04BBF800B95138 /* trails.xml in Resources */,
 				7DB09C6C1B1F5A730024AF21 /* terrain@2x.png in Resources */,
+				7DF64E401B455DB600CB4E76 /* orange-pin.png in Resources */,
+				7DF64E461B455DB600CB4E76 /* black-pin.png in Resources */,
 				722298E41B33382F004C4D7B /* routes_config.plist in Resources */,
-				72E316711B35D9FC00FF3EEA /* red-pin.png in Resources */,
+				7DF64E3E1B455DB600CB4E76 /* red-pin.png in Resources */,
 				72E316601B348CE900FF3EEA /* maptiles.mbtiles in Resources */,
 				7DD5A15E1B03AD2400B95138 /* ic_action_search.png in Resources */,
+				7DF64E441B455DB600CB4E76 /* green-pin.png in Resources */,
 				72CDC3401B0BDF6400FAD25C /* elevations.xml in Resources */,
 				72C815A51AC99170001B602F /* Mapbox.bundle in Resources */,
 				72C80F7D1AC98DD7001B602F /* Main.storyboard in Resources */,
@@ -542,6 +561,7 @@
 				72E88B4D1AD1417E00D8E7AF /* orange_icon.png in Resources */,
 				7265A8571AFF995200CBAF79 /* xc.geojson in Resources */,
 				72E88B4E1AD1417E00D8E7AF /* red_icon.png in Resources */,
+				7DF64E421B455DB600CB4E76 /* blue-pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,12 +584,16 @@
 				72E3166D1B356BEC00FF3EEA /* green_skills.geojson in Resources */,
 				72E3166E1B356BEC00FF3EEA /* red.geojson in Resources */,
 				72E3166B1B356BEC00FF3EEA /* black.geojson in Resources */,
+				7DF64E411B455DB600CB4E76 /* orange-pin.png in Resources */,
 				72D411601B2311AD00498A98 /* Mapbox.bundle in Resources */,
-				72E316721B35D9FC00FF3EEA /* red-pin.png in Resources */,
+				7DF64E3F1B455DB600CB4E76 /* red-pin.png in Resources */,
+				7DF64E431B455DB600CB4E76 /* blue-pin.png in Resources */,
 				722298E91B3338C5004C4D7B /* black_icon.png in Resources */,
+				7DF64E451B455DB600CB4E76 /* green-pin.png in Resources */,
 				72D411611B2311AD00498A98 /* Main.storyboard in Resources */,
 				72D411621B2311AD00498A98 /* LaunchScreen.xib in Resources */,
 				722298ED1B3338C5004C4D7B /* green_icon.png in Resources */,
+				7DF64E471B455DB600CB4E76 /* black-pin.png in Resources */,
 				722298DB1B333598004C4D7B /* maptiles.mbtiles in Resources */,
 				72E316641B355E1100FF3EEA /* elevations.xml in Resources */,
 				72D411631B2311AD00498A98 /* Images.xcassets in Resources */,
