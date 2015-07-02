@@ -10,11 +10,12 @@
 #import "MapViewController.h"
 #import "TrailLocationsViewController.h"
 #import "TerrainViewController.h"
+#import "ViewController.h"
 
 @interface MapViewController ()
 - (void)showTrailLocations;
 @property (weak, nonatomic) IBOutlet UIView *mapHolder;
-
+-(void) addRoute;
 - (void)showTerrain;
 @end
 
@@ -26,39 +27,43 @@
     // Do any additional setup after loading the view.
     RMMBTilesSource *offlineSource = [[RMMBTilesSource alloc] initWithTileSetResource:@"maptiles" ofType:@"mbtiles"];
     
-    RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:offlineSource];
+    self.mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:offlineSource];
     
-    if (!self.mapView) {
-        self.mapView = mapView;
+
+    
+    self.mapView.zoom = 15;
+    self.mapView.maxZoom = 18;
+    self.mapView.minZoom = 1;
+
+    self.mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
+
+    
+    self.mapView.adjustTilesForRetinaDisplay = NO; //use hd map
+    self.mapView.hideAttribution = YES;
+    [self.mapHolder addSubview:self.mapView];
+    if (!self.route) {
+        //get route from master.
+        UINavigationController *navc = [self.splitViewController.viewControllers firstObject];
+        ViewController *masterVC = (ViewController *)navc.topViewController;
+        self.route = masterVC.routes[0];
     }
     
-    mapView.zoom = 15;
-    mapView.maxZoom = 18;
-    mapView.minZoom = 1;
-
-    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
-
+    [self addRoute];
+    self.mapView.showLogoBug = NO;
     
-    mapView.adjustTilesForRetinaDisplay = NO; //use hd map
-    mapView.hideAttribution = YES;
-    [self.mapHolder addSubview:mapView];
+
+    self.mapView.delegate = self;
     
-    RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
+    
+    
+}
+
+-(void) addRoute{
+    RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView
                                                           coordinate:self.route.center
                                                             andTitle:@"Trail"];
+    [self.mapView addAnnotation:annotation];
     
-    
-    
-    
-    mapView.showLogoBug = NO;
-
-    annotation.title      = @"anything";
-    
-
-    mapView.delegate = self;
-    
-    
-    [mapView addAnnotation:annotation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,7 +86,7 @@
     [self.navigationItem setRightBarButtonItems: [[NSArray alloc] initWithObjects:terrainButton,searchButton, locateButton, nil] animated:NO];
     //move to location.
     
-    if(self.doneLocationSetup == NO){
+    if(self.doneLocationSetup == NO && self.route){
         [self.mapView zoomWithLatitudeLongitudeBoundsSouthWest:self.route.bb.southWest northEast:self.route.bb.northEast animated:YES];
          self.doneLocationSetup = YES;
     } 

@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1230" y="3738"/>
         </scene>
-        <!--TEST-->
+        <!--Trails-->
         <scene sceneID="sZx-Uf-wIS">
             <objects>
-                <navigationController title="TEST" id="EWU-v9-ezq" sceneMemberID="viewController">
+                <navigationController title="Trails" id="EWU-v9-ezq" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N87-FO-bTT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
