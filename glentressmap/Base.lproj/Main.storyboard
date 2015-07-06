@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YLN-cu-raJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dys-RQ-3Kj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -103,6 +103,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqK-Es-AhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1320" y="1414"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SKb-ab-1hi">
+            <objects>
+                <viewController id="dys-RQ-3Kj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h5O-qW-4By"/>
+                        <viewControllerLayoutGuide type="bottom" id="RIu-p0-MaH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mDs-PL-k28">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweedpatrol.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-J3-S5N">
+                                <rect key="frame" x="41" y="28" width="500" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3SH-2w-1p7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYy-c9-z4z">
+                                <rect key="frame" x="41" y="380" width="500" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-s4-zII">
+                                        <rect key="frame" x="392" y="56" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="wAw-ZB-ejK"/>
+                                        </constraints>
+                                        <state key="normal" image="gotomap.png">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z2-2Y-yCX">
+                                        <rect key="frame" x="0.0" y="50" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Ply-c2-nkv"/>
+                                        </constraints>
+                                        <state key="normal" image="gotoinfo.png">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cU1-s4-zII" secondAttribute="bottom" constant="44" id="O1b-aK-re7"/>
+                                    <constraint firstItem="3z2-2Y-yCX" firstAttribute="top" secondItem="wYy-c9-z4z" secondAttribute="top" constant="50" id="OVP-y9-bvj"/>
+                                    <constraint firstItem="cU1-s4-zII" firstAttribute="trailing" secondItem="wYy-c9-z4z" secondAttribute="trailingMargin" id="QWI-tN-3Yb"/>
+                                    <constraint firstItem="cU1-s4-zII" firstAttribute="top" secondItem="wYy-c9-z4z" secondAttribute="top" constant="56" id="Ufp-sd-wBw"/>
+                                    <constraint firstItem="3z2-2Y-yCX" firstAttribute="leading" secondItem="wYy-c9-z4z" secondAttribute="leading" id="YLq-eg-bRV"/>
+                                    <constraint firstItem="3z2-2Y-yCX" firstAttribute="centerY" secondItem="wYy-c9-z4z" secondAttribute="centerY" id="v3p-Ec-p1R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.29019607843137257" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="trailing" secondItem="wYy-c9-z4z" secondAttribute="trailing" id="9Jn-9p-wlM"/>
+                            <constraint firstAttribute="bottom" secondItem="wYy-c9-z4z" secondAttribute="bottom" constant="20" symbolic="YES" id="RIH-ym-ETI"/>
+                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="leading" secondItem="mDs-PL-k28" secondAttribute="leadingMargin" constant="25" id="ZJA-wt-qFM"/>
+                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="top" secondItem="h5O-qW-4By" secondAttribute="bottom" constant="8" symbolic="YES" id="cV7-p6-IC2"/>
+                            <constraint firstItem="wYy-c9-z4z" firstAttribute="leading" secondItem="Tfo-J3-S5N" secondAttribute="leading" id="hVo-s1-ATy"/>
+                            <constraint firstItem="wYy-c9-z4z" firstAttribute="top" secondItem="mDs-PL-k28" secondAttribute="top" constant="380" id="ofC-SG-P49"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tfo-J3-S5N" secondAttribute="trailing" constant="43" id="uiS-zn-1Wi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNs-oU-hkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="1163"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="I4E-Lz-Cy2">
@@ -237,8 +307,11 @@
     </scenes>
     <resources>
         <image name="Compass.png" width="36" height="36"/>
+        <image name="gotoinfo.png" width="72" height="72"/>
+        <image name="gotomap.png" width="72" height="72"/>
+        <image name="tweedpatrol.png" width="641" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y6T-tK-LmP"/>
+        <segue reference="JpQ-Ua-fYZ"/>
     </inferredMetricsTieBreakers>
 </document>

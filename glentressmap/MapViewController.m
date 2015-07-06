@@ -35,7 +35,7 @@
     self.mapView.maxZoom = 18;
     self.mapView.minZoom = 1;
 
-    self.mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
+    //self.mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
 
     
     self.mapView.adjustTilesForRetinaDisplay = NO; //use hd map
