@@ -45,7 +45,7 @@
         //get route from master.
         UINavigationController *navc = [self.splitViewController.viewControllers firstObject];
         ViewController *masterVC = (ViewController *)navc.topViewController;
-        self.route = masterVC.routes[0];
+        //self.route = masterVC.routes[0];
     }
     
     [self addRoute];

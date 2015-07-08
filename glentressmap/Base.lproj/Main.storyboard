@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dys-RQ-3Kj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dys-RQ-3Kj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1320" y="1414"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro PageVC-->
         <scene sceneID="SKb-ab-1hi">
             <objects>
-                <viewController id="dys-RQ-3Kj" sceneMemberID="viewController">
+                <viewController id="dys-RQ-3Kj" customClass="IntroPageVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h5O-qW-4By"/>
                         <viewControllerLayoutGuide type="bottom" id="RIu-p0-MaH"/>
@@ -144,6 +144,9 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="go:" destination="dys-RQ-3Kj" eventType="touchUpInside" id="rFR-Sj-62s"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -177,7 +180,7 @@
         <!--Split View Controller-->
         <scene sceneID="I4E-Lz-Cy2">
             <objects>
-                <splitViewController id="YLN-cu-raJ" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="split" id="YLN-cu-raJ" sceneMemberID="viewController">
                     <connections>
                         <segue destination="EWU-v9-ezq" kind="relationship" relationship="masterViewController" id="Dbr-jq-KTk"/>
                         <segue destination="mST-iR-dHt" kind="relationship" relationship="detailViewController" id="y6T-tK-LmP"/>
@@ -312,6 +315,6 @@
         <image name="tweedpatrol.png" width="641" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JpQ-Ua-fYZ"/>
+        <segue reference="y6T-tK-LmP"/>
     </inferredMetricsTieBreakers>
 </document>
