@@ -12,6 +12,6 @@
 
 @property(nonatomic, strong) NSMutableArray *routes;
 
-
+@property (strong, nonatomic) UIBarButtonItem *displayModeButton;
 @end
 

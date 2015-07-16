@@ -12,9 +12,11 @@
 #import "MapViewController.h"
 #import "Route.h"
 #import "AppDelegate.h"
+#import "IntroPageVC.h"
 
-@interface ViewController ()
 
+@interface ViewController ()<UISplitViewControllerDelegate>
+-(void) showHome;
 
 @end
 
@@ -35,7 +37,11 @@ NSMutableArray *lineStrings;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"+ Contact" 
+                                 style:UIBarButtonItemStylePlain 
+                                target:self 
+                                action:@selector(showHome)];
+[self.navigationItem setLeftBarButtonItem:item animated:NO];
     
     NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"routes_config" ofType:@"plist"];
     NSArray *routes = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"routes"];
@@ -57,6 +63,21 @@ NSMutableArray *lineStrings;
         
     }
     
+    
+    
+    UISplitViewController *splitViewController = self.splitViewController;
+
+     
+    
+    
+    
+    UINavigationController *navigationController = [self.splitViewController.viewControllers lastObject];
+    if ([splitViewController respondsToSelector:@selector(displayModeButtonItem)]) {
+        UIBarButtonItem * displayModeButton = splitViewController.displayModeButtonItem;
+        navigationController.topViewController.navigationItem.leftBarButtonItem = displayModeButton ;
+
+    }
+    
 
     
 
@@ -70,6 +91,23 @@ NSMutableArray *lineStrings;
     self.navigationItem.title = @"Trails";
     
     
+}
+
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.splitViewController.delegate = self;
+}
+
+
+-(void) showHome{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    // 3. Create vc
+    IntroPageVC *tutorialViewController = [storyboard instantiateViewControllerWithIdentifier:@"intro"];
+    // 4. Set as root
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.window.rootViewController = tutorialViewController;
+
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -122,14 +160,59 @@ NSMutableArray *lineStrings;
                     
                     controller.navigationItem.leftItemsSupplementBackButton = YES;
                 } else {
-                    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-                    controller.navigationItem.leftBarButtonItem = appDelegate.displayModeButton;
+                  
+                    controller.navigationItem.leftBarButtonItem = self.displayModeButton;
                     
                 }
                 
                 
             }
         }
+    }
+}
+
+
+
+#pragma mark - Split view
+
+
+
+- (void) splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem{
+
+    UISplitViewController *splitViewController = (UISplitViewController *)self.splitViewController;
+    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    
+    navigationController.topViewController.navigationItem.leftBarButtonItem = barButtonItem;
+    
+    NSLog(@"barbuttonItem %@", barButtonItem);
+}
+
+
+- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc{
+
+    UINavigationController *navigationController = [self.splitViewController.viewControllers lastObject];
+    
+    navigationController.topViewController.navigationItem.leftBarButtonItem = barButtonItem;
+    self.displayModeButton = barButtonItem;
+    NSLog(@"barbuttonItem %@", barButtonItem);
+
+}
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController
+collapseSecondaryViewController:(UIViewController *)secondaryViewController
+  ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]]
+        && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[MapViewController class]]
+        && ([(MapViewController *)[(UINavigationController *)secondaryViewController topViewController] route] == nil)) {
+        
+        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+        return YES;
+        
+    } else {
+        
+        return NO;
+        
     }
 }
 

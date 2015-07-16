@@ -13,7 +13,7 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                      bundle: nil];
  
-UISplitViewController *split = [mainStoryboard instantiateViewControllerWithIdentifier:@"split"];
+UISplitViewController *split = [mainStoryboard instantiateInitialViewController] ;
 self.view.window.rootViewController = split;
 
 }

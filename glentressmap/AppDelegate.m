@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MapViewController.h"
+#import "IntroPageVC.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -19,16 +20,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-/*
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    if ([splitViewController respondsToSelector:@selector(displayModeButtonItem)]) {
-        UIBarButtonItem * displayModeButton = splitViewController.displayModeButtonItem;
-        navigationController.topViewController.navigationItem.leftBarButtonItem = displayModeButton ;
 
-    }
-     splitViewController.delegate = self;
-     */
+     // 1. Initialize window
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    // 2. Get storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    // 3. Create vc
+    IntroPageVC *tutorialViewController = [storyboard instantiateViewControllerWithIdentifier:@"intro"];
+    // 4. Set as root
+    self.window.rootViewController = tutorialViewController;
+    // 5. Call to show views
+[self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -54,47 +56,5 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - Split view
-
-
-
-- (void) splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem{
-
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    
-    navigationController.topViewController.navigationItem.leftBarButtonItem = barButtonItem;
-    
-    NSLog(@"barbuttonItem %@", barButtonItem);
-}
-
-
-- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc{
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    
-    navigationController.topViewController.navigationItem.leftBarButtonItem = barButtonItem;
-    self.displayModeButton = barButtonItem;
-    NSLog(@"barbuttonItem %@", barButtonItem);
-
-}
-
-- (BOOL)splitViewController:(UISplitViewController *)splitViewController
-collapseSecondaryViewController:(UIViewController *)secondaryViewController
-  ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    
-    if ([secondaryViewController isKindOfClass:[UINavigationController class]]
-        && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[MapViewController class]]
-        && ([(MapViewController *)[(UINavigationController *)secondaryViewController topViewController] route] == nil)) {
-        
-        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-        return YES;
-        
-    } else {
-        
-        return NO;
-        
-    }
-}
 @end
 
