@@ -116,29 +116,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweedpatrol.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-J3-S5N">
-                                <rect key="frame" x="41" y="35" width="250" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="ODd-Xi-BUE"/>
-                                    <constraint firstAttribute="width" constant="250" id="ZBL-T9-XVB"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-s4-zII">
-                                <rect key="frame" x="41" y="193" width="100" height="100"/>
+                                <rect key="frame" x="175" y="250" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="CJn-L3-Hks"/>
-                                    <constraint firstAttribute="height" constant="100" id="Ugm-fj-ufd"/>
+                                    <constraint firstAttribute="height" constant="100" id="5CE-9a-Gpp"/>
+                                    <constraint firstAttribute="width" constant="100" id="X4y-X3-zhd"/>
                                 </constraints>
                                 <state key="normal" image="gotomap.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z2-2Y-yCX">
-                                <rect key="frame" x="189" y="193" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweedpatrol.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-J3-S5N">
+                                <rect key="frame" x="175" y="39" width="250" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8aP-Tc-mP8"/>
-                                    <constraint firstAttribute="width" constant="100" id="nRV-So-MuI"/>
+                                    <constraint firstAttribute="width" constant="250" id="JPw-71-ve5">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="150" id="VEW-N7-Gjw">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z2-2Y-yCX">
+                                <rect key="frame" x="325" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6BK-bK-oOW"/>
+                                    <constraint firstAttribute="width" constant="100" id="L99-Cj-6Wb"/>
                                 </constraints>
                                 <state key="normal" image="gotoinfo.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,13 +156,12 @@
                         <color key="backgroundColor" red="1" green="0.29019607843137257" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cU1-s4-zII" firstAttribute="leading" secondItem="mDs-PL-k28" secondAttribute="leadingMargin" constant="25" id="B3x-TK-fiJ"/>
-                            <constraint firstItem="3z2-2Y-yCX" firstAttribute="top" secondItem="Tfo-J3-S5N" secondAttribute="bottom" constant="8" id="Fce-M0-G5W"/>
-                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="leading" secondItem="cU1-s4-zII" secondAttribute="leading" id="Lfi-h8-yh3"/>
-                            <constraint firstItem="3z2-2Y-yCX" firstAttribute="leading" secondItem="cU1-s4-zII" secondAttribute="trailing" constant="48" id="V03-18-0fW"/>
-                            <constraint firstItem="cU1-s4-zII" firstAttribute="top" secondItem="Tfo-J3-S5N" secondAttribute="bottom" constant="8" id="u3D-ug-slo"/>
-                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="leading" secondItem="mDs-PL-k28" secondAttribute="leadingMargin" constant="25" id="usv-XY-WH3"/>
-                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="top" secondItem="h5O-qW-4By" secondAttribute="bottom" constant="15" id="xB9-CE-pYa"/>
+                            <constraint firstItem="cU1-s4-zII" firstAttribute="top" secondItem="Tfo-J3-S5N" secondAttribute="bottom" constant="61" id="FEc-V6-JEY"/>
+                            <constraint firstItem="Tfo-J3-S5N" firstAttribute="top" secondItem="h5O-qW-4By" secondAttribute="bottom" constant="19" id="IDS-zl-1yq"/>
+                            <constraint firstAttribute="centerX" secondItem="Tfo-J3-S5N" secondAttribute="centerX" id="VbX-eA-TD2"/>
+                            <constraint firstItem="3z2-2Y-yCX" firstAttribute="top" secondItem="Tfo-J3-S5N" secondAttribute="bottom" constant="61" id="ezU-r9-ToD"/>
+                            <constraint firstItem="3z2-2Y-yCX" firstAttribute="trailing" secondItem="Tfo-J3-S5N" secondAttribute="trailing" id="s3I-30-crJ"/>
+                            <constraint firstItem="cU1-s4-zII" firstAttribute="leading" secondItem="Tfo-J3-S5N" secondAttribute="leading" id="uqP-W4-lgW"/>
                         </constraints>
                     </view>
                 </viewController>
