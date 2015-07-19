@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YLN-cu-raJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YLN-cu-raJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +13,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="22" sectionFooterHeight="22" id="3AT-z7-h8t">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RouteCell" textLabel="gey-6m-ncb" detailTextLabel="4XM-T0-sMt" rowHeight="122" style="IBUITableViewCellStyleSubtitle" id="mIG-Te-wiZ">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -69,7 +69,7 @@
                                 <color key="backgroundColor" red="1" green="0.54119281973964561" blue="0.54759327495620647" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Dfw-to-7CN" firstAttribute="top" secondItem="VLl-wY-J6s" secondAttribute="bottom" id="58S-98-OkX"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Dfw-to-7CN" secondAttribute="bottom" constant="-64" id="Yh5-7M-ef6"/>
@@ -87,6 +87,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijR-vW-iHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1230" y="3738"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="SJZ-xb-982">
+            <objects>
+                <viewController id="kdv-Zk-ttv" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vfx-Gc-eTM"/>
+                        <viewControllerLayoutGuide type="bottom" id="a3g-5i-GQ7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uZb-wA-Nwo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUB-Eb-fqq">
+                                <rect key="frame" x="16" y="230" width="568" height="221"/>
+                                <string key="text">The Tweed Valley Bike Patrol provides visitors to Glentress and Innerleithen Forests with the advantages of local knowledge, bike repair skills and emergency assistance from a team of skilled riders.
+
+All patrollers are qualified MBLA Trail Cycle Leaders, Mountain Bike Leaders or Mountain Rescue Team members with specialist first aid training in outdoor scenarios. 
+
+We are a completely voluntary organisation that runs solely on donations made by the public; donations can be made at various collection boxes in the Tweed Valley or by contacting us</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-0p-3Ao">
+                                <rect key="frame" x="213" y="459" width="174" height="84"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="eYL-tq-Aop"/>
+                                    <constraint firstAttribute="height" constant="84" id="tgY-1d-RwO"/>
+                                </constraints>
+                                <state key="normal" title="Donate" image="pay_pal.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweedpatrol.png" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-rA-A0T">
+                                <rect key="frame" x="175" y="72" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="XPK-yB-zv9"/>
+                                    <constraint firstAttribute="height" constant="150" id="zKp-F9-bAt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tAa-rA-A0T" firstAttribute="top" secondItem="Vfx-Gc-eTM" secondAttribute="bottom" constant="8" symbolic="YES" id="6XY-A3-20l"/>
+                            <constraint firstItem="DUB-Eb-fqq" firstAttribute="leading" secondItem="uZb-wA-Nwo" secondAttribute="leadingMargin" id="Dih-q3-WVr"/>
+                            <constraint firstItem="cNR-0p-3Ao" firstAttribute="centerX" secondItem="DUB-Eb-fqq" secondAttribute="centerX" id="GwR-Uh-zBS"/>
+                            <constraint firstItem="a3g-5i-GQ7" firstAttribute="top" secondItem="cNR-0p-3Ao" secondAttribute="bottom" constant="57" id="cZ1-R0-OdG"/>
+                            <constraint firstItem="DUB-Eb-fqq" firstAttribute="top" secondItem="tAa-rA-A0T" secondAttribute="bottom" constant="8" symbolic="YES" id="dJS-LJ-eV7"/>
+                            <constraint firstItem="DUB-Eb-fqq" firstAttribute="trailing" secondItem="uZb-wA-Nwo" secondAttribute="trailingMargin" id="l5p-dg-sxI"/>
+                            <constraint firstItem="cNR-0p-3Ao" firstAttribute="top" secondItem="DUB-Eb-fqq" secondAttribute="bottom" constant="8" symbolic="YES" id="nAz-kn-rpJ"/>
+                            <constraint firstItem="tAa-rA-A0T" firstAttribute="centerX" secondItem="DUB-Eb-fqq" secondAttribute="centerX" id="vJe-fd-2Xf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V96-mn-ucm">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="st3-cM-psb">
+                            <connections>
+                                <action selector="showHOme:" destination="kdv-Zk-ttv" id="xEB-vt-epq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icx-kl-CFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2121" y="707"/>
         </scene>
         <!--Trails-->
         <scene sceneID="sZx-Uf-wIS">
@@ -126,6 +192,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="go:" destination="dys-RQ-3Kj" eventType="touchUpInside" id="BM7-70-4x4"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweedpatrol.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-J3-S5N">
                                 <rect key="frame" x="175" y="39" width="250" height="150"/>
@@ -149,7 +218,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="go:" destination="dys-RQ-3Kj" eventType="touchUpInside" id="rFR-Sj-62s"/>
+                                    <segue destination="Hoo-ag-aHe" kind="showDetail" id="TkV-tY-hvC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNs-oU-hkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408" y="1163"/>
+            <point key="canvasLocation" x="534" y="941"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="I4E-Lz-Cy2">
@@ -189,7 +258,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XIV-DJ-zsE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrailNameCell" textLabel="PH4-WC-gDr" imageView="GC1-rX-dUZ" style="IBUITableViewCellStyleDefault" id="vch-Bb-tsU">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -259,7 +328,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="TO3-oA-O2L" firstAttribute="leading" secondItem="rOi-4e-4II" secondAttribute="leading" id="1fr-Re-6dO"/>
                             <constraint firstItem="8nw-u2-Cvz" firstAttribute="top" secondItem="rOi-4e-4II" secondAttribute="top" constant="180" id="1q6-Rm-nGB"/>
@@ -299,14 +368,33 @@
             </objects>
             <point key="canvasLocation" x="1242" y="2894"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4iN-R6-ObK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hoo-ag-aHe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Hb-ev-K1a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kdv-Zk-ttv" kind="relationship" relationship="rootViewController" id="8kb-3K-Qiw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIC-bn-88T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="707"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Compass.png" width="36" height="36"/>
         <image name="gotoinfo.png" width="72" height="72"/>
         <image name="gotomap.png" width="72" height="72"/>
+        <image name="pay_pal.png" width="72" height="72"/>
         <image name="tweedpatrol.png" width="641" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y6T-tK-LmP"/>
+        <segue reference="JpQ-Ua-fYZ"/>
     </inferredMetricsTieBreakers>
 </document>

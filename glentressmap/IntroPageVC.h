@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface IntroPageVC : UIViewController
+
+@property(nonatomic) NSMutableArray * routes;
 - (IBAction)go:(id)sender ;
 @end

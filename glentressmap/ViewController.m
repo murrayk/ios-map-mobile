@@ -37,7 +37,7 @@ NSMutableArray *lineStrings;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"+ Contact" 
+UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Home"
                                  style:UIBarButtonItemStylePlain 
                                 target:self 
                                 action:@selector(showHome)];
