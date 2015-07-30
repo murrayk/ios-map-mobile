@@ -31,6 +31,8 @@
     self.window.rootViewController = tutorialViewController;
     // 5. Call to show views
 [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 

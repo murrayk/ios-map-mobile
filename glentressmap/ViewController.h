@@ -10,7 +10,7 @@
 
 @interface ViewController : UITableViewController 
 
-@property(nonatomic, strong) NSMutableArray *routes;
+@property(nonatomic, strong) NSArray *routes;
 
 @property (strong, nonatomic) UIBarButtonItem *displayModeButton;
 @end

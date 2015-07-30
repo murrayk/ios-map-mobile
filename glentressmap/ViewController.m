@@ -27,13 +27,6 @@ NSArray *detail;
 NSMutableArray *lineStrings;
 
 
-- (NSMutableArray*) routes
-{
-    if (!_routes){
-        _routes = [[NSMutableArray alloc] init];
-    }
-    return _routes;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,27 +36,10 @@ UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Home"
                                 action:@selector(showHome)];
 [self.navigationItem setLeftBarButtonItem:item animated:NO];
     
-    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"routes_config" ofType:@"plist"];
-    NSArray *routes = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"routes"];
     
-    for (NSDictionary *r in routes) {
-        
-        
-        Route *route = [Route createRouteWithTitle:r[@"title"]
-                                         detail:r[@"detail"]
-                                           icon:r[@"icon"]
-                                       jsonFile:r[@"jsonFile"]
-                                          color:r[@"color"]
-                   locationsStringArrayNameAttr:r[@"locationsStringArrayNameAttr"]
-                  elevationsStringArrayNameAttr:r[@"elevationsStringArrayNameAttr"]
-                                         routeInfo:r[@"routeInfo"]
-                                         markerIcon:r[@"markerIcon"]];
-        
-        [self.routes addObject:route];
-        
-    }
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    
+    self.routes =appDelegate.routes;
     
     UISplitViewController *splitViewController = self.splitViewController;
 

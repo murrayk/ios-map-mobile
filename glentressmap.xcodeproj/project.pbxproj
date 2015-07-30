@@ -361,6 +361,8 @@
 				72E88B491AD1416A00D8E7AF /* images */,
 				72A655A51AC9AD0A005B4C07 /* maps */,
 				72C80F751AC98DD7001B602F /* AppDelegate.h */,
+				7D3633151B4AD89C003FFB24 /* IntroPageVC.h */,
+				7D3633161B4AD89C003FFB24 /* IntroPageVC.m */,
 				72C80F761AC98DD7001B602F /* AppDelegate.m */,
 				72C80F781AC98DD7001B602F /* ViewController.h */,
 				72C80F791AC98DD7001B602F /* ViewController.m */,
@@ -437,8 +439,6 @@
 				722298E71B3338C5004C4D7B /* green_icon.png */,
 				72E88B4B1AD1417E00D8E7AF /* orange_icon.png */,
 				72E88B4C1AD1417E00D8E7AF /* red_icon.png */,
-				7D3633151B4AD89C003FFB24 /* IntroPageVC.h */,
-				7D3633161B4AD89C003FFB24 /* IntroPageVC.m */,
 			);
 			name = images;
 			sourceTree = "<group>";
